@@ -5,7 +5,7 @@ import './Login.css';
 
         <div className="">
 
-        <p className="para">This is Login page</p>
+        <p className="para">11th september</p>
         </div>
 
 );
