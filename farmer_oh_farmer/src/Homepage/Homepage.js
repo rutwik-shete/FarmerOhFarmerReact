@@ -7,11 +7,18 @@ import './Homepage.css';
     
             <div className="Home">  
        <div className="bgimage">
-       <p>Farmer Oh Farmer</p> 
-           
+
+       <div className="appName">
+          <span><h1>Farmer</h1></span><br />
+          <span><h1>Oh</h1></span>
+          <span><h1>Farmer</h1></span>
+       </div>
+
+          <Login></Login>     
+      
        </div>
          
-            <Login></Login>
+            
              </div>
         
               

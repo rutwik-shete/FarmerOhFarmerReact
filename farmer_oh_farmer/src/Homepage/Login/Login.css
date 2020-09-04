@@ -1,7 +1,71 @@
-.para{
 
-padding: 20px;
+.main{
+
+position: relative;
+left: 69%;
+}
 
 
+.rememberme{
 
+    position: relative;
+    top: 106px;
+    left: 160px;
+    
+
+}
+
+.signup{
+
+    position: relative;
+    top: 212px;
+    left: 168px;
+}
+
+.submit{
+
+    position: relative;
+    top: 234px;
+}
+
+.checkbox{
+
+    position: relative;
+    top: 191px;
+
+}
+
+.password{
+
+
+    position: relative;
+    top: 155px;
+    left: 6px;
+}
+
+.email{
+
+    position: relative;
+    top: 142px;
+    left: 6px;
+}
+
+.Heading{
+    position: relative;
+    top: 89px;
+    left: 86px;
+    
+
+    
+}
+
+.button1{
+    width: 90px;
+}
+
+.block{
+
+height: 100%;
+width: 100%;
+color: aqua;
 }

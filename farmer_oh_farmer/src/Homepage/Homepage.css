@@ -12,13 +12,22 @@ margin: 0;
 
 }
 
-.bgimage
-{
+.bgimage{
     background-image: url("../assets/BgImage.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 height: 100vh;
+}
 
+.Homepage{
 
+top: 30%;
+
+}
+
+.appName{
+    position: relative;
+    left: 20%;
+    top: 30%;
 }
