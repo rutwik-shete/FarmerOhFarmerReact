@@ -1,31 +1,40 @@
 
 .main{
+position: absolute;
+right: 10%;
+top: 20%;   
+width: 400px;
+height: 350px;
+background-color: #6C8E0AAB;
+text-align: center;
 
-position: relative;
-left: 69%;
 }
 
 
-.rememberme{
+::placeholder{
 
-    position: relative;
-    top: 106px;
-    left: 160px;
-    
+    color: #6C8E0A;
+}
+
+input{
+
+    height: 27px;
 
 }
 
 .signup{
-
+    margin: 15px;
+/* 
     position: relative;
     top: 212px;
-    left: 168px;
+    left: 168px; */
 }
 
 .submit{
-
-    position: relative;
-    top: 234px;
+    margin: 15px;
+    /* position: relative;
+    top: 234px; */
+    color: #6C8E0A;
 }
 
 .checkbox{
@@ -36,24 +45,29 @@ left: 69%;
 }
 
 .password{
-
+/* 
 
     position: relative;
     top: 155px;
-    left: 6px;
+    left: 6px; */
+    
 }
 
 .email{
-
+    margin: 15px;
+/* 
     position: relative;
     top: 142px;
-    left: 6px;
+    left: 6px; */
 }
 
 .Heading{
-    position: relative;
+    /* position: relative;
     top: 89px;
-    left: 86px;
+    left: 86px; */
+    margin: 35px;
+    color: white;
+
     
 
     
@@ -61,11 +75,18 @@ left: 69%;
 
 .button1{
     width: 90px;
+    height: 30px;
+    color: #6C8E0A;
 }
 
-.block{
+.button2{
+    color: #6C8E0A;
+    height: 30px;
+    width: 120px;
+}
 
-height: 100%;
-width: 100%;
-color: aqua;
+.flexBox{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
