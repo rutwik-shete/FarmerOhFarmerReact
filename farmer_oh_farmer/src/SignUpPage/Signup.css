@@ -1,0 +1,28 @@
+.Bgimage{
+    background-image: url("../assets/Bgimage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;   
+}
+.startselling{
+	position: relative;
+    top: 250px;
+    left: 750px;
+}
+.Formpage{
+	position: relative;
+    top: 280px;
+    left: 850px;
+}
+
+.submit{
+	position: relative;
+    left: 900px;
+    top: 300px;
+}
+.phonenumber{
+    position: relative;
+    top: 280px;
+    left: 850px;
+}
