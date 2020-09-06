@@ -6,23 +6,60 @@
     height: 100vh;   
 }
 .startselling{
-	position: relative;
+	
     top: 250px;
-    left: 750px;
+    bottom: 250px;
+    margin: 15px;
+    
 }
-.Formpage{
-	position: relative;
-    top: 280px;
-    left: 850px;
+.firstname{
+    margin:15px;
 }
-
+.lastname{
+    margin: 15px;
+}
+.password{
+    margin: 15px;
+}
+.address{
+    margin: 15px;
+}
 .submit{
-	position: relative;
-    left: 900px;
-    top: 300px;
+    position: relative;
+    top: 50px;}
+.flexbox{
+    position: relative;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
 }
 .phonenumber{
-    position: relative;
+    margin: 15px;
     top: 280px;
-    left: 850px;
+    
+}
+.pincode{
+
+    margin: 15px;
+}
+input{
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+}
+.Home{
+    position: absolute;
+    right: 29%;
+    top: 21%;
+    width: 800px;
+    height: 533px;
+    background-color: #6C8E0AAB;
+    text-align: center;
+}
+::placeholder{
+    text-align: center;
 }
