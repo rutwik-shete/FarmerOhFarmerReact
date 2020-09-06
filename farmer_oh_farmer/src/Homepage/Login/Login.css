@@ -12,27 +12,27 @@ text-align: center;
 
 .passlogo
 {
-    background-image: url("./logos/Icon\ feather-key.png");
-    background-repeat: no-repeat;
-    height: 33px;
+
     position: relative;
-    top: 222px;
-    left: 63px;
+    right: 106px;
+    top: 143px;
+    height: 15px;;
 }
 
 .maillogo{
-    background-image: url("./logos/Icon\ ionic-ios-mail.png");
-    background-repeat: no-repeat;
+   
     height: 22px;
     position: relative;
-    top: 144px;
-    left: 67px;
+    top: 197px;
+    right: 127px
 }
 
 ::placeholder{
 
     color: #6C8E0A;
     padding-left: 40px;
+    font: bold;
+    font: message-box;
 
 }
 
@@ -43,7 +43,6 @@ input{
     border-radius: 10px;
     border-style: dotted;
     border-color: white;
-    
 
 }
 

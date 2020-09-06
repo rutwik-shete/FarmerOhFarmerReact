@@ -4,12 +4,9 @@ import './Login.css';
     return(
 
         <div className="main">
-        <div className="passlogo">
-        </div>
-        
-        <div className="maillogo">
-        </div>
-      
+          <img src={require("./logos/mail.png")} className="passlogo"></img>
+          <img src={require("./logos/chavi.png")} className="maillogo"></img>
+       
         <div className="Heading"> 
           <h1>LOGIN</h1>
           </div> 
