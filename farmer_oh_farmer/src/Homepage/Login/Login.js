@@ -4,10 +4,16 @@ import './Login.css';
     return(
 
         <div className="main">
-       
+        <div className="passlogo">
+        </div>
+        
+        <div className="maillogo">
+        </div>
+      
         <div className="Heading"> 
           <h1>LOGIN</h1>
           </div> 
+          
 
         <div className="email">
          <input type="text" placeholder="farmer@example.com" size="35"  ></input> 
@@ -28,9 +34,9 @@ import './Login.css';
           <button type="submit" className="button2">Create account</button> 
        </div>
       </div>
+      
 
-
-       
+      
 
        </div>
 

@@ -2,23 +2,48 @@
 .main{
 position: absolute;
 right: 10%;
-top: 20%;   
-width: 400px;
-height: 350px;
+top: 19%;
+ width: 400px;
+ height: 437px;
 background-color: #6C8E0AAB;
 text-align: center;
 
 }
 
+.passlogo
+{
+    background-image: url("./logos/Icon\ feather-key.png");
+    background-repeat: no-repeat;
+    height: 33px;
+    position: relative;
+    top: 216px;
+    left: 42px;
+}
+
+.maillogo{
+    background-image: url("./logos/Icon\ ionic-ios-mail.png");
+    background-repeat: no-repeat;
+    height: 22px;
+    position: relative;
+    top: 141px;
+    left: 45px;
+}
 
 ::placeholder{
 
     color: #6C8E0A;
+    padding-left: 40px;
 }
 
 input{
 
     height: 27px;
+    font-size: medium;
+    font: bold;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    
 
 }
 
@@ -45,6 +70,9 @@ input{
 }
 
 .password{
+    font: message-box;
+    border-radius: 10px;
+
 /* 
 
     position: relative;
@@ -55,6 +83,8 @@ input{
 
 .email{
     margin: 15px;
+    font: message-box;
+
 /* 
     position: relative;
     top: 142px;
@@ -77,16 +107,26 @@ input{
     width: 90px;
     height: 30px;
     color: #6C8E0A;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+
 }
 
 .button2{
     color: #6C8E0A;
     height: 30px;
-    width: 120px;
+    width: 150px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
 }
 
 .flexBox{
     display: flex;
     justify-content: center;
     margin: 20px;
+    
 }
