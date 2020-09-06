@@ -16,8 +16,8 @@ text-align: center;
     background-repeat: no-repeat;
     height: 33px;
     position: relative;
-    top: 216px;
-    left: 42px;
+    top: 222px;
+    left: 63px;
 }
 
 .maillogo{
@@ -25,20 +25,20 @@ text-align: center;
     background-repeat: no-repeat;
     height: 22px;
     position: relative;
-    top: 141px;
-    left: 45px;
+    top: 144px;
+    left: 67px;
 }
 
 ::placeholder{
 
     color: #6C8E0A;
     padding-left: 40px;
+
 }
 
 input{
 
-    height: 27px;
-    font-size: medium;
+    height: 30px;
     font: bold;
     border-radius: 10px;
     border-style: dotted;
