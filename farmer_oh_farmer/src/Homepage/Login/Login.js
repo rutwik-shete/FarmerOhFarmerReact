@@ -4,24 +4,21 @@ import './Login.css';
     return(
 
         <div className="main">
-          <img src={require("./logos/mail.png")} className="passlogo"></img>
-          <img src={require("./logos/chavi.png")} className="maillogo"></img>
-       
+            
         <div className="Heading"> 
           <h1>LOGIN</h1>
           </div> 
           
-
         <div className="email">
-         <input type="text" placeholder="farmer@example.com" size="35"  ></input> 
+         <input type="text" placeholder="farmer@example.com" size="35"></input>
+         <img src={require("./logos/mail.png")} className="maillogo"></img>
         </div>
 
         <div className="password">
           <input type="text" placeholder="Password" size="35"></input>
+          <img src={require("./logos/chavi.png")} className="passlogo"></img>
         </div>
 
-        
-       
       <div className="flexBox">
       <div className="submit">
           <button type="submit" className="button1" >Submit</button>

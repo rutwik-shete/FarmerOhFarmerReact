@@ -14,17 +14,17 @@ text-align: center;
 {
 
     position: relative;
-    right: 106px;
-    top: 143px;
-    height: 15px;;
+    top: 7px;
+    right: 255px;
+    height: 21px;;
 }
 
 .maillogo{
    
-    height: 22px;
+    height: 16px;
     position: relative;
-    top: 197px;
-    right: 127px
+    top: 5px;
+    right: 255px;
 }
 
 ::placeholder{
@@ -43,6 +43,8 @@ input{
     border-radius: 10px;
     border-style: dotted;
     border-color: white;
+    position: relative;
+    left: 13px;
 
 }
 
