@@ -1,0 +1,28 @@
+This is the Homepage of our website.This website  will be only used by the farmer.As you can see there is a login box where farmers can enter their credentials and login in 
+When new farmer wants to register he can click create account button which will eventually lead him to next page of sign up form.
+
+2.After clicking create account this pop up form will be displayed where farmer has to add 
+his name,address,city,phone no and pincode.after submiting the details he will be directed to next page of registering his company name.
+
+3.In this farmer has to add his company name like Shirdi Farmer,Appa foodmart etc.and below that there will be dropdwon for selecting the areas.Where farmer has to select the multiple pincodes  where he can deliver.
+for eg.Farmer can deliver in Dhayari area so he has to select the pincode 411041.The pincode list will be displayed after clicking the select area.Here farmer's account is created and his company name is also registerd in the database.
+
+4.After hiiting continue he will pe directed to this view product page.Where all produce of farmer will be displayed.Initially If new farmer registers no products messgae will displayed.
+If farmer already added his produce and wants to remove some of them he can remove them by simply clicking remove product and the product will be also removed from webpage and database.
+If farmer wants to add produce he can click the add product tab
+on upper right which will take him to this add product page.
+
+5.This is main step of the website.Here farmer will add his produce details.
+By clicking the choose product. The list of products will be displayed and farmer will select his produce to add and he will also select the unit for the product.
+The units will be Kg,Gm and judi. farmer will select particular unit for his produce.then farmer has to enter minimum order quantity for his produce.
+for eg.Farmer has selcted Tomatoes and unit is selcted as Gm so he can add how much minium order he can gave to customer.for e.g minimum order is 250Gm is added as unit is in Gm.
+Also the rate for that 250Gm has to be added by farmer like 20Rs per 250Gm.
+farmer can add more produce by clicking add more.
+
+6.Now the farmers job of adding his produce is done.Now farmer needs to see the orders from the customer.Hence view order page is there for the farmer where he can see all the orders from the customer with his name , address,phone no, his ordered items and also the delivery staues as pending and Delivered.
+
+So this is all for the Website.
+Moving On to the next slide which is app for customer and Delivery I would like to pass on to 
+Aaryan telgu.
+                  Thank you.
+

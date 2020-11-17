@@ -7,10 +7,11 @@ import './Homepage.css';
     
             <div className="Home">  
             
-       <div className="bgimage">
+       {/* <div className="bgimage"> */}
       
-          <Login></Login>     
-          </div>
+          <Login></Login>  
+             
+          
        
          
             

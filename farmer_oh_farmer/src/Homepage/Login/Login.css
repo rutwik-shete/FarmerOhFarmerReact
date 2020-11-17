@@ -1,3 +1,12 @@
+.bgimage{
+    background-image: url("../../assets/BgImage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
 
 .main{
 position: absolute;
@@ -33,7 +42,8 @@ text-align: center;
     padding-left: 40px;
     font: bold;
     font: message-box;
-
+    position: relative;
+    top: 3px;
 }
 
 input{
@@ -104,7 +114,16 @@ input{
     
 }
 
-.button1{
+.button{
+    border-radius: 10px;
+    height: 31px;
+    width: 100px;
+    border-style: dotted;
+    border-color: white;
+    color: #6C8E0A;
+}
+
+.button3{
     width: 90px;
     height: 30px;
     color: #6C8E0A;
