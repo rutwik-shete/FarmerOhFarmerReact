@@ -7,10 +7,9 @@ class Signup extends Component {
 
         this.state = {
             firstName: "",
-            lastName: "",
             password: "",
+            confirmpassword: "",
             address: "",
-            city: "",
             phonenumber: "",
             pincode: "",
 
@@ -26,22 +25,17 @@ class Signup extends Component {
     }
     lasthandler = (event) => {
         this.setState({
-            lastName: event.target.value
+            password: event.target.value
         })
     }
     passwordhandler = (event) => {
         this.setState({
-            password: event.target.value
+            confirmpassword: event.target.value
         })
     }
     addresshandler = (event) => {
         this.setState({
             address: event.target.value
-        })
-    }
-    cityhandler = (event) => {
-        this.setState({
-            city: event.target.value
         })
     }
     phonenumberhandler = (event) => {
@@ -60,10 +54,9 @@ class Signup extends Component {
         console.log(this.state);
         this.setState({
             firstName: "",
-            lastName: "",
             password: "",
+            confirmpassword: "",
             address: "",
-            city: "",
             phonenumber: "",
             pincode: "",
         })
@@ -84,28 +77,25 @@ class Signup extends Component {
                                 <div classname="firstname"> 
                                     <input type="text" value={this.state.firstName} onChange={this.firsthandler} placeholder="FirstName"  size="50"/><br />
                                 </div>
-                                <div className="lastname">
-                                    <input type="text" value={this.state.lastName} onChange={this.lasthandler} placeholder="LastName" size="50"/><br />
+                                <div className="password">
+                                    <input type="password" value={this.state.lastName} onChange={this.lasthandler} placeholder="Password" size="50"/><br />
                                 </div>
-                                <div classname="password">
-                                    <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Password"size="50" /><br />
+                                <div classname="confirmpassword">
+                                    <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Confirm Passsword"size="50" /><br />
                                 </div>
                                 <div className="address">
                                     <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50"/><br />
                                 </div>
-                                <div className="city">
-                                    <input type="text" value={this.state.city} onChange={this.cityhandler} placeholder="City" size="50"/><br />
-                                </div>
                                 <div className="flexbox">
                                     <div className="phonenumber">
-                                        <input type="number" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber" size="20" /><br />
+                                        <input type="number" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber"/><br />
                                     </div>
                                     <div className="pincode">
-                                        <input type="number" value={this.state.pincode} onChange={this.pincodehandler} placeholder="PinCode" /><br />
+                                        <input type="number" value={this.state.pincode} onChange={this.pincodehandler} placeholder="PinCode"/><br />
                                     </div>
                                 </div>
                                 <div className="submit">
-                                    <input type="submit" value="Sign Up" /> 
+                                    <input type="submit" value="Sign Up"/> 
                                 </div>
                         </form>
             </div>
