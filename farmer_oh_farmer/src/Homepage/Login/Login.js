@@ -13,23 +13,23 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 class Login extends Component{
   constructor(){
     super()
-    this.state={
-      Showme:true
-    }
-  }
+  //   this.state={
+  //     Showme:true
+  //   }
+  // }
 
-    operation(){
-      this.setState({
-        Showme:false
-      })
+  //   operation(){
+  //     this.setState({
+  //       Showme:false
+  //     })
 
     }
   render() {
     return(
-      <Router> 
+      // <Router> 
       
       
-   { this.state.Showme?
+  //  { this.state.Showme?
         
         <div className="bgimage">  
 
@@ -56,7 +56,7 @@ class Login extends Component{
 <div className="flexBox">
 <div className="submit">
   <button type="submit" className="button">
- <Link className="button3" to="/View" onClick={()=>this.operation()}>Submit</Link>
+ <Link to='/view' className="Enter">submit</Link>
  </button>
 </div>
 
@@ -67,12 +67,12 @@ class Login extends Component{
       
        </div>
        </div>
-       :null
-}
-       <Switch>
-  <Route exact path="/View" component={View}></Route>
-      </Switch> 
-      </Router> 
+//        :null
+// }
+  //      <Switch>
+  // <Route exact path="/View" component={View}></Route>
+  //     </Switch> 
+  //     </Router> 
 
 
 );

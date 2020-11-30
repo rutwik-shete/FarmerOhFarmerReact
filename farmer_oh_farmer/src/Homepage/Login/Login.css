@@ -23,8 +23,8 @@ text-align: center;
 {
 
     position: relative;
-    top: 7px;
-    right: 255px;
+    top: 0px;
+    right: 295px;
     height: 21px;;
 }
 
@@ -32,8 +32,8 @@ text-align: center;
    
     height: 16px;
     position: relative;
-    top: 5px;
-    right: 255px;
+    top: 1px;
+    right: 296px;
 }
 
 ::placeholder{
@@ -115,13 +115,13 @@ input{
 }
 
 .button{
-    border-radius: 10px;
+     border-radius: 10px;
     height: 31px;
     width: 100px;
     border-style: dotted;
     border-color: white;
     color: #6C8E0A;
-}
+} 
 
 .button3{
     width: 90px;
@@ -149,4 +149,9 @@ input{
     justify-content: center;
     margin: 20px;
     
+}
+
+.Enter{
+    font: message-box;
+    color: #6C8E0A;
 }
