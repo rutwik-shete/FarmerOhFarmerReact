@@ -100,7 +100,7 @@ class Signup extends Component {
                                         <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber"/><br />
                                     </div>
                                     <div className="pincode">
-                                        <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder="Farmer PinCode" maxlength="5"/><br />
+                                        <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder=" PinCode" maxlength="6" size="20"/><br />
                                     </div>
                                 </div>
                                 <div className="submit">

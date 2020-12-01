@@ -23,7 +23,7 @@
 }
 .flexbox{
     position: relative;
-    top: -5px;
+    bottom: 5px;
     display: flex;
     justify-content: center;
     margin: 13px;
@@ -31,7 +31,6 @@
 .phonenumber{
     margin: 15px;
     top: 280px;
-    
 }
 .pincode{
 
@@ -45,7 +44,6 @@ input{
     border-color: white;
     font-size: large;
     color: #6C8E0AAB;
-
 }
 .Home{
     position: absolute;
@@ -58,6 +56,7 @@ input{
     border-radius: 30px;
 }
 ::placeholder{
-    text-align: center;
+    text-align: center; 
     color: #6C8E0AAB;
+    padding-right: 30px; 
 }
