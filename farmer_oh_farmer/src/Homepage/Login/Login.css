@@ -1,31 +1,76 @@
+.bgimage{
+    background-image: url("../../assets/BgImage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 
-.main{
-
-position: relative;
-left: 69%;
 }
 
 
-.rememberme{
+.main{
+position: absolute;
+right: 10%;
+top: 19%;
+ width: 400px;
+ height: 437px;
+background-color: #6C8E0AAB;
+text-align: center;
+
+}
+
+.passlogo
+{
 
     position: relative;
-    top: 106px;
-    left: 160px;
-    
+    top: 0px;
+    right: 295px;
+    height: 21px;;
+}
+
+.maillogo{
+   
+    height: 16px;
+    position: relative;
+    top: 1px;
+    right: 296px;
+}
+
+::placeholder{
+
+    color: #6C8E0A;
+    padding-left: 40px;
+    font: bold;
+    font: message-box;
+    position: relative;
+    top: 3px;
+}
+
+input{
+
+    height: 30px;
+    font: bold;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    position: relative;
+    left: 13px;
 
 }
 
 .signup{
-
+    margin: 15px;
+/* 
     position: relative;
     top: 212px;
-    left: 168px;
+    left: 168px; */
 }
 
 .submit{
-
-    position: relative;
-    top: 234px;
+    margin: 15px;
+    /* position: relative;
+    top: 234px; */
+    color: #6C8E0A;
 }
 
 .checkbox{
@@ -36,36 +81,77 @@ left: 69%;
 }
 
 .password{
+    font: message-box;
+    border-radius: 10px;
 
+/* 
 
     position: relative;
     top: 155px;
-    left: 6px;
+    left: 6px; */
+    
 }
 
 .email{
+    margin: 15px;
+    font: message-box;
 
+/* 
     position: relative;
     top: 142px;
-    left: 6px;
+    left: 6px; */
 }
 
 .Heading{
-    position: relative;
+    /* position: relative;
     top: 89px;
-    left: 86px;
+    left: 86px; */
+    margin: 35px;
+    color: white;
+
     
 
     
 }
 
-.button1{
+.button{
+     border-radius: 10px;
+    height: 31px;
+    width: 100px;
+    border-style: dotted;
+    border-color: white;
+    color: #6C8E0A;
+} 
+
+.button3{
     width: 90px;
+    height: 30px;
+    color: #6C8E0A;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+
 }
 
-.block{
+.button2{
+    color: #6C8E0A;
+    height: 30px;
+    width: 150px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+}
 
-height: 100%;
-width: 100%;
-color: aqua;
+.flexBox{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+}
+
+.Enter{
+    font: message-box;
+    color: #6C8E0A;
 }

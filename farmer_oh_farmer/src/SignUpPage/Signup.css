@@ -2,7 +2,7 @@
 	
     top: 250px;
     bottom: 250px;
-    margin: 25px;
+    margin: 15px;
     
 }
 .firstname{
@@ -23,7 +23,7 @@
 }
 .flexbox{
     position: relative;
-    top: 5px;
+    top: -5px;
     display: flex;
     justify-content: center;
     margin: 13px;

@@ -6,7 +6,7 @@ class Signup extends Component {
         super(props)
 
         this.state = {
-            firstName: "",
+            Name: "",
             password: "",
             confirmpassword: "",
             address: "",
@@ -38,6 +38,11 @@ class Signup extends Component {
             address: event.target.value
         })
     }
+    emailhandler = (event) => {
+        this.setState({
+            address: event.target.value
+        })
+    }
     phonenumberhandler = (event) => {
         this.setState({
             phonenumber: event.target.value
@@ -57,6 +62,7 @@ class Signup extends Component {
             password: "",
             confirmpassword: "",
             address: "",
+            email:"",
             phonenumber: "",
             pincode: "",
         })
@@ -75,10 +81,10 @@ class Signup extends Component {
                                 <h1>Register And Start Selling</h1>
                             </div>
                                 <div classname="firstname"> 
-                                    <input type="text" value={this.state.firstName} onChange={this.firsthandler} placeholder="FirstName"  size="50"/><br />
+                                    <input type="text" value={this.state.firstName} onChange={this.firsthandler} placeholder="Name/CompanyName/GroupName" size="50" /><br />
                                 </div>
                                 <div className="password">
-                                    <input type="password" value={this.state.lastName} onChange={this.lasthandler} placeholder="Password" size="50"/><br />
+                                    <input type="password" value={this.state.lastName} onChange={this.lasthandler} placeholder="Password" size="37"/><br />
                                 </div>
                                 <div classname="confirmpassword">
                                     <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Confirm Passsword"size="50" /><br />
@@ -86,12 +92,15 @@ class Signup extends Component {
                                 <div className="address">
                                     <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50"/><br />
                                 </div>
+                                <div className="email">
+                                    <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Email" size="37"/><br />
+                                </div>
                                 <div className="flexbox">
                                     <div className="phonenumber">
-                                        <input type="number" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber"/><br />
+                                        <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber"/><br />
                                     </div>
                                     <div className="pincode">
-                                        <input type="number" value={this.state.pincode} onChange={this.pincodehandler} placeholder="PinCode"/><br />
+                                        <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder="Farmer PinCode" maxlength="5"/><br />
                                     </div>
                                 </div>
                                 <div className="submit">

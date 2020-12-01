@@ -1,45 +1,90 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Login.css';
-  function Login(){
+import {Link}  from 'react-router-dom';
+import  View from '../../View/view';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+// function Reqlogin(){
+//   return(
+   
+//   );
+// }
+
+class Login extends Component{
+  constructor(){
+    super()
+  //   this.state={
+  //     Showme:true
+  //   }
+  // }
+
+  //   operation(){
+  //     this.setState({
+  //       Showme:false
+  //     })
+
+    }
+  render() {
     return(
+      // <Router> 
+      
+      
+  //  { this.state.Showme?
+        
+        <div className="bgimage">  
 
         <div className="main">
-        <div className="block">
-        </div>
-        <div className="Heading"> 
-          <h1>LOGIN</h1>
-          </div> 
 
-        <div className="email">
-         <input type="text" placeholder="farmer@example.com" size="35"></input> 
-        </div>
+      
+          
+  
+ <div className="Heading"> 
+ <h1>LOGIN</h1>
+ 
+   </div> 
+ 
+<div className="email">
+<input type="text" placeholder="farmer@example.com" size="35"></input>
+<img src={require("./logos/mail.png")} className="maillogo"></img>
+</div>
 
-        <div className="password">
-          <input type="text" placeholder="Password" size="35"></input>
-        </div>
+<div className="password">
+ <input type="text" placeholder="Password" size="35"></input>
+ <img src={require("./logos/chavi.png")} className="passlogo"></img>
+</div>
 
-        <div className="checkbox">
-          <input type="checkbox" id="customecheck" ></input>
-          <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+<div className="flexBox">
+<div className="submit">
+  <button type="submit" className="button">
+ <Link to='/view' className="Enter">submit</Link>
+ </button>
+</div>
+
+<div className="signup">
+ <button type="submit" className="button2">Create account</button> 
+</div>
+</div>
+      
        </div>
-
-        <div className="submit">
-          <button type="submit" className="button1" >Submit</button>
        </div>
+//        :null
+// }
+  //      <Switch>
+  // <Route exact path="/View" component={View}></Route>
+  //     </Switch> 
+  //     </Router> 
 
-        <div className="signup">
-          <button type="submit">Create account</button> 
-       </div>
-
-        <div className="rememberme">
-        <p className="forgot-password text-right">
-              <a href="#">Forget password?</a>
-          </p>
-       </div>
-
-       </div>
 
 );
+  }
+    
 
 }
+  
+
+
+
+
+
+  
 export default Login;
