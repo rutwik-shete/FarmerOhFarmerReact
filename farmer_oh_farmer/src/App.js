@@ -6,7 +6,6 @@ import view from './View/view';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import View from './View/view';
 import Order from './Order/Order';
- 
 class App extends Component{
 
              
@@ -21,6 +20,7 @@ return(
      <Route path="/view"  component={View} />
      <Route path="/Order" component={Order} />
      <Route path="/Login" component={Login} />
+     {/* <Route path="/Signup" component={SignUp} /> */}
 
      </Switch>
      </Router> 

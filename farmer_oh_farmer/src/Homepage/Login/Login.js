@@ -25,23 +25,13 @@ class Login extends Component{
 
     }
   render() {
-    return(
-      // <Router> 
-      
-      
-  //  { this.state.Showme?
-        
-        <div className="bgimage">  
-
-        <div className="main">
-
-      
-          
-  
- <div className="Heading"> 
- <h1>LOGIN</h1>
- 
-   </div> 
+    return(  
+  //  { this.state.Showme?  
+      <div className="bgimage">  
+      <div className="main"> 
+      <div className="Heading"> 
+            <h1>LOGIN</h1>
+       </div> 
  
 <div className="email">
 <input type="text" placeholder="farmer@example.com" size="35"></input>
@@ -62,6 +52,11 @@ class Login extends Component{
 
 <div className="signup">
  <button type="submit" className="button2">Create account</button> 
+ {/* <button type="submit" className="button2">
+   <Link to="/Signup" className="Allenter"> */}
+     {/* Create account */}
+   {/* </Link>
+ </button> */}
 </div>
 </div>
       
