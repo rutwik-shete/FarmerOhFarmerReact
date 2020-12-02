@@ -1,0 +1,62 @@
+.startselling{
+	
+    top: 250px;
+    bottom: 250px;
+    margin: 15px;
+    
+}
+.firstname{
+    margin:35px;
+}
+.lastname{
+    margin: 35px;
+}
+.password{
+    margin: 35px;
+}
+.address{
+    margin: 35px;
+}
+.submit{
+    position: relative;
+    top: 10px;    
+}
+.flexbox{
+    position: relative;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 13px;
+}
+.phonenumber{
+    margin: 15px;
+    top: 280px;
+}
+.pincode{
+
+    margin: 15px;
+}
+input{
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
+}
+.Home{
+    position: absolute;
+    right: 29%;
+    top: 21%;
+    width: 800px;
+    height: 553px;
+    background-color: #6C8E0AAB;
+    text-align: center;
+    border-radius: 30px;
+}
+::placeholder{
+    text-align: center; 
+    color: #6C8E0AAB;
+    padding-right: 30px; 
+}

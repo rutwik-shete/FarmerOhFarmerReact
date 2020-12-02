@@ -6,11 +6,10 @@ class Signup extends Component {
         super(props)
 
         this.state = {
-            firstName: "",
-            lastName: "",
+            Name: "",
             password: "",
+            confirmpassword: "",
             address: "",
-            city: "",
             phonenumber: "",
             pincode: "",
 
@@ -26,12 +25,12 @@ class Signup extends Component {
     }
     lasthandler = (event) => {
         this.setState({
-            lastName: event.target.value
+            password: event.target.value
         })
     }
     passwordhandler = (event) => {
         this.setState({
-            password: event.target.value
+            confirmpassword: event.target.value
         })
     }
     addresshandler = (event) => {
@@ -39,9 +38,9 @@ class Signup extends Component {
             address: event.target.value
         })
     }
-    cityhandler = (event) => {
+    emailhandler = (event) => {
         this.setState({
-            city: event.target.value
+            address: event.target.value
         })
     }
     phonenumberhandler = (event) => {
@@ -60,10 +59,10 @@ class Signup extends Component {
         console.log(this.state);
         this.setState({
             firstName: "",
-            lastName: "",
             password: "",
+            confirmpassword: "",
             address: "",
-            city: "",
+            email:"",
             phonenumber: "",
             pincode: "",
         })
@@ -77,24 +76,37 @@ class Signup extends Component {
     render() {
         return (
             <div className="Home">
-                <div className="bgimage">
-
-                    <div>
-
                         <form onSubmit={this.handleSubmit}>
-                            <h1>SignUp And Start Selling</h1>
-                            <label>FirstName :</label> <input type="text" value={this.state.firstName} onChange={this.firsthandler} placeholder="FirstName..." /><br />
-                            <label>LastName :</label> <input type="text" value={this.state.lastName} onChange={this.lasthandler} placeholder="LastName..." /><br />
-                            <label>Password :</label> <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Password..." /><br />
-                            <label>Address :</label> <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address..." /><br />
-                            <label>City :</label> <input type="text" value={this.state.city} onChange={this.cityhandler} placeholder="City..." /><br />
-                            <label>PhoneNumber :</label> <input type="number" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber..." /><br />
-                            <label>PinCode :</label> <input type="number" value={this.state.pincode} onChange={this.pincodehandler} placeholder="PinCode..." /><br />
-                            <input type="submit" value="Submit" />
+                            <div className="startselling">
+                                <h1>Register And Start Selling</h1>
+                            </div>
+                                <div classname="firstname"> 
+                                    <input type="text" value={this.state.firstName} onChange={this.firsthandler} placeholder="Name/CompanyName/GroupName" size="50" /><br />
+                                </div>
+                                <div className="password">
+                                    <input type="password" value={this.state.lastName} onChange={this.lasthandler} placeholder="Password" size="37"/><br />
+                                </div>
+                                <div classname="confirmpassword">
+                                    <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Confirm Passsword"size="50" /><br />
+                                </div>
+                                <div className="address">
+                                    <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50"/><br />
+                                </div>
+                                <div className="email">
+                                    <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Email" size="37"/><br />
+                                </div>
+                                <div className="flexbox">
+                                    <div className="phonenumber">
+                                        <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber"/><br />
+                                    </div>
+                                    <div className="pincode">
+                                        <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder=" PinCode" maxlength="6" size="20"/><br />
+                                    </div>
+                                </div>
+                                <div className="submit">
+                                    <input type="submit" value="Sign Up"/> 
+                                </div>
                         </form>
-
-                    </div>
-                </div>
             </div>
         )
     }
