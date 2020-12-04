@@ -3,91 +3,84 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-    opacity: 95%;
-    width: 92%;
-    margin: auto;
-   
-
-}
-
-.Ontop{
-    background-color: black;
-    width: 100%;
-    height: 100vh;
+    height: 265vh;
+    width: 150vh;
+    
 }
 
 #header2{
-    width: 17%;
-    height: 16%;
+    position: relative;
+    width: 20vh;
+    height: 11vh;
     background-color: #6C8E0AAB;
 }
 
 #navbox2{
     position: relative;
-    width: 155vh;
-    height: 37%;
+    width: 121vh;
+    height: 7vh;
     background-color: #6C8E0AAB;
-    left: 250px;
-    bottom: 50px;
+    left: 132px;
+    bottom: 25px;
 }
 
 #header-text-4{
+    position:relative;
     font-family: "Times New Roman", Times, serif;
-    font-size: 2.1em;
+    font-size: 2.5vh;
     color: white;
-    /* left: 10px; */
-    margin-left: 26px;
+    margin-left: 15px;
+    top: 5px;
 }
 
 #header-text-5{
     font-family: "Times New Roman", Times, serif;
-    font-size: 2.1em;
+    font-size: 2.5vh;
     color: white;
-    /* margin-top: 2px; */
-    /* padding-top: 10px; */
     position: relative;
-    top: 28px;
-    /* margin: auto; */
-    /* margin-top: 2px; */
-    right: 12px;
+    top: 21px;
+    right: 8px;
 }
 
 #header-text-6{
-    font-size: 2.1em;
+    font-size: 2.5vh;
     color: white;
     font-family: "Times New Roman", Times, serif;
     position: relative;
-    top: 60px;
-    right: 21px;
+    top: 38px;
+    right: 12px;
 }
 
 .Getout{
     position: relative;
-    left: 92%;
-    top: 7px;
+    left: 109vh;
+    top: 8px;
     color: white;
    }
  
 .logo{
     position: relative;
-    left: 85%;
-    top: 7px;
+    left: 96vh;
+    top: 8px;
 }   
 
 .block1{
     position: relative;
-    left: 1%;
-    top: 7vh;
+    top: 10vh;
     width: 125vh;
-    height: 83vh;
+    height: 157vh;
     background-color: #6C8E0AAB;
     border-radius: 20px;
+    left: 8vh;
 }
 
-.Ordercard{
-    height: 30vh;
-    width: 29vh;
+.Ordercard{    
+    position: relative;
+    height: 60vh;
+    width: 41vh;
     top: 35px;
+    border-radius: 20px;
+    left: 90px;
+    
 }
 

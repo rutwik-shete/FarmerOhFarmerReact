@@ -3,44 +3,33 @@ import './Login.css';
 import {Link}  from 'react-router-dom';
 import  View from '../../View/view';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-// function Reqlogin(){
-//   return(
-   
-//   );
-// }
+import MetaTags from 'react-meta-tags';
 
 class Login extends Component{
   constructor(){
     super()
-  //   this.state={
-  //     Showme:true
-  //   }
-  // }
-
-  //   operation(){
-  //     this.setState({
-  //       Showme:false
-  //     })
 
     }
+    
   render() {
-    return(  
-  //  { this.state.Showme?  
-      <div className="bgimage">  
+
+    return(   
+    
+      <div className="bgimage">   
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
       <div className="main"> 
       <div className="Heading"> 
             <h1>LOGIN</h1>
-       </div> 
+             </div> 
  
-<div className="email">
-<input type="text" placeholder="farmer@example.com" size="35"></input>
-<img src={require("./logos/mail.png")} className="maillogo"></img>
+<div className="Email">
+<input type="text" placeholder="Email" ></input>
+<img src={require("./logos/mail.png")} alt="mailbox" className="maillogo"></img>
 </div>
 
-<div className="password">
- <input type="text" placeholder="Password" size="35"></input>
- <img src={require("./logos/chavi.png")} className="passlogo"></img>
+<div className="Password">
+ <input type="text" placeholder="Password" ></input>
+ <img src={require("./logos/chavi.png")} alt="key" className="passlogo"></img>
 </div>
 
 <div className="flexBox">
@@ -52,28 +41,18 @@ class Login extends Component{
 
 <div className="signup">
  <button type="submit" className="button2">Create account</button> 
- {/* <button type="submit" className="button2">
-   <Link to="/Signup" className="Allenter"> */}
-     {/* Create account */}
-   {/* </Link>
- </button> */}
+
 </div>
 </div>
       
        </div>
+       
+    
        </div>
-//        :null
-// }
-  //      <Switch>
-  // <Route exact path="/View" component={View}></Route>
-  //     </Switch> 
-  //     </Router> 
-
-
+      
 );
   }
     
-
 }
   
 

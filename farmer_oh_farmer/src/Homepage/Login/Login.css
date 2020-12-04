@@ -1,5 +1,5 @@
 .bgimage{
-    background-image: url("../../assets/BgImage.png");
+    background-image: url("../../assets/BImg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,12 +10,13 @@
 
 .main{
 position: absolute;
-right: 10%;
+right: 14%;
 top: 19%;
- width: 400px;
- height: 437px;
+ width: 70%;
+ height: 53vh;
 background-color: #6C8E0AAB;
 text-align: center;
+border-radius: 10px;
 
 }
 
@@ -23,8 +24,8 @@ text-align: center;
 {
 
     position: relative;
-    top: 0px;
-    right: 295px;
+    right: 14vh;
+    bottom: 25px;
     height: 21px;;
 }
 
@@ -32,112 +33,79 @@ text-align: center;
    
     height: 16px;
     position: relative;
-    top: 1px;
-    right: 296px;
+    right: 14vh;
+    bottom: 25px;
 }
 
 ::placeholder{
-
-    color: #6C8E0A;
-    padding-left: 40px;
-    font: bold;
-    font: message-box;
-    position: relative;
-    top: 3px;
+ position: relative;
 }
 
 input{
 
-    height: 30px;
+    position: relative;
     font: bold;
     border-radius: 10px;
     border-style: dotted;
     border-color: white;
-    position: relative;
-    left: 13px;
+    width: 36vh;
+    right: 6px;
+    
 
 }
 
 .signup{
     margin: 15px;
-/* 
-    position: relative;
-    top: 212px;
-    left: 168px; */
+
 }
 
 .submit{
     margin: 15px;
-    /* position: relative;
-    top: 234px; */
+  
     color: #6C8E0A;
 }
 
-.checkbox{
 
+
+.Password{
     position: relative;
-    top: 191px;
-
+    font: message-box;
+    width: 33vh;
+    left: 20px;   
 }
 
-.password{
-    font: message-box;
-    border-radius: 10px;
-
-/* 
-
+.Email{
     position: relative;
-    top: 155px;
-    left: 6px; */
-    
-}
-
-.email{
-    margin: 15px;
     font: message-box;
+    width: 33vh;
+    left: 20px;
 
-/* 
-    position: relative;
-    top: 142px;
-    left: 6px; */
+
 }
 
 .Heading{
-    /* position: relative;
-    top: 89px;
-    left: 86px; */
     margin: 35px;
-    color: white;
-
-    
-
-    
+    color: white  
 }
 
 .button{
+    position: relative;
      border-radius: 10px;
     height: 31px;
-    width: 100px;
+    width: 73px;
     border-style: dotted;
     border-color: white;
     color: #6C8E0A;
+    bottom: 12px;
+    left: 5px;
+    
 } 
 
-.button3{
-    width: 90px;
-    height: 30px;
-    color: #6C8E0A;
-    font: message-box;
-    border-radius: 10px;
-    border-style: dotted;
-    border-color: white;
-
-}
 
 .button2{
     color: #6C8E0A;
     height: 30px;
-    width: 150px;
+    width: 130px;
     font: message-box;
     border-radius: 10px;
     border-style: dotted;
@@ -147,7 +115,8 @@ input{
 .flexBox{
     display: flex;
     justify-content: center;
-    margin: 20px;
+   
+    
     
 }
 
@@ -156,7 +125,3 @@ input{
     color: #6C8E0A;
 }
 
-/* .Allenter{
-    font: message-box;
-    color:#6C8E0A ;
-} */

@@ -1,0 +1,21 @@
+.Outer{
+    display:grid;
+    grid-template-columns: 350px 300px;
+}
+
+.Custname{
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+.Add{
+    position: relative;
+    left: 5px;
+}
+
+.Phn{
+    position: relative;
+    left: 5px;
+    top: 10vh;
+}

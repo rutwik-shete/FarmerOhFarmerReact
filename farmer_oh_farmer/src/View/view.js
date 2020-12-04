@@ -13,51 +13,37 @@ class View extends Component{
   state={
      img:[
        {
-         rate:"250gm /",
+         rate:"250gm/",
          src:'./images/tomatoes.jpg' ,
-         price:" 60Rs",
+         price:"60Rs",
        },
        {
-         rate:"250gm /",
+         rate:"250gm/",
          src:'./images/tomatoes.jpg',
-         price:" 60Rs"
+         price:"60Rs"
        },
        {
-         rate:"250gm /",
+         rate:"250gm/",
          src:'./images/tomatoes.jpg',
-         price:" 60Rs"
+         price:"60Rs"
 
        },
        {
-        rate:"250gm /",
+        rate:"250gm/",
         src:'./images/tomatoes.jpg',
-        price:" 60Rs"
+        price:"60Rs"
        },
        {
-        rate:"250gm /",
+        rate:"250gm/",
         src:'./images/tomatoes.jpg',
-        price:" 60Rs"
+        price:"60Rs"
        },
        {
-        rate:"250gm /",
+        rate:"250gm/",
         src:'./images/tomatoes.jpg',
-        price:" 60Rs"
+        price:"60Rs"
        },
-       {
-        rate:"250gm /",
-        src:'./images/tomatoes.jpg',
-        price:" 60Rs"
-       },
-       {
-        rate:"250gm /",
-        src:'./images/tomatoes.jpg',
-        price:" 60Rs"
-       },
-       {
-        rate:"250gm /",
-        src:'./images/tomatoes.jpg',
-        price:" 60Rs"
-       }   
+        
      ],
   }
   render(){
@@ -75,12 +61,12 @@ class View extends Component{
      
      <div id="navbox">
       <div className="flexbox">
-     <span id="Addpro">Add product</span> 
+     <span id="Addpro">Addproduct</span> 
        {/* <span id="Vieword">View order</span> */}
-        <Link to='/Order' className="Linked">View order</Link>
+        <Link to='/Order' className="Linked">Vieworder</Link>
        <img src={require("../Homepage/Login/logos/logout.png")} className="out" />
        {/* <span id="Signout">LogOut</span> */}
-       <Link to='/Login' className="Linked2">LogOut</Link>
+       <Link to='/Login' className="Linked2">Logout</Link>
        </div>
       </div>
       </div> 

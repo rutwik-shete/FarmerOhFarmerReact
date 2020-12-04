@@ -17,10 +17,10 @@ class Orderloop extends Component{
                       <CardTitle className="Custname">
                        Name : {ord.name}  
                       </CardTitle>
-                      <CardSubtitle>
+                      <CardSubtitle className="Add">
                         Address : {ord.address}
                         </CardSubtitle>  
-                      <CardText>
+                      <CardText className="Phn">
                         Phone no : {ord.phone}
                         </CardText>  
                       </Card> 

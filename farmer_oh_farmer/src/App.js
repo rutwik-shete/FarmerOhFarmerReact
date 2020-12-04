@@ -5,12 +5,12 @@ import view from './View/view';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import View from './View/view';
 import Order from './Order/Order';
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 import Login from './Homepage/Login/Login';
 import Signup from './SignUpPage/Signup';
 
->>>>>>> 13495af22df56246065621b2649deb0c8e618beb
+// >>>>>>> 13495af22df56246065621b2649deb0c8e618beb
 class App extends Component{
 
              
@@ -18,9 +18,9 @@ class App extends Component{
 return(
 
     <div>
-      <Signup></Signup>
+      {/* <Signup></Signup> */}
   
-     {/* <Router>
+      <Router>
        <Switch>
      <Route path="/" exact component={Login} />
      <Route path="/view"  component={View} />
@@ -28,8 +28,8 @@ return(
      <Route path="/Login" component={Login} />
      {/* <Route path="/Signup" component={SignUp} /> */}
 
-     </Switch>
-     </Router>  */}
+      </Switch>
+     </Router>   
    
 
    

@@ -19,18 +19,13 @@ class Order extends Component{
           name:"Atharva Tuljapurkar",
           address:"A-504,Sai Niwas,Dhayari",
           phone:"8999052763"
-         },
-         {
-          name:"Atharva Tuljapurkar",
-          address:"A-504,Sai Niwas,Dhayari",
-          phone:"8999052763"
          }
 
        ],
      }
      render(){
      return(
-        <div className="Ontop">
+    
         <div className="Toporder">
         <div id="header2">
       <span id="header-text-4">Farmer</span>
@@ -39,15 +34,17 @@ class Order extends Component{
       <div id="navbox2">
       <Link to='/Login' className="Getout">LogOut</Link>
       <img src={require("../Homepage/Login/logos/logout.png")} className="logo" />
+      </div>
+      </div>
       <div className="block1">  
 
       <Orderloop ord={this.state.Orders} />
     
-      </div>
-      </div>
+    
+      
         </div>
         </div>
-        </div>
+      
        
         
 
