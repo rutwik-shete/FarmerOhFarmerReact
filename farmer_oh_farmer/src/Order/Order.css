@@ -10,24 +10,24 @@
 
 #header2{
     position: relative;
-    width: 20vh;
-    height: 11vh;
+    width: 22%;
+    height: 7%;
     background-color: #6C8E0AAB;
 }
 
 #navbox2{
     position: relative;
-    width: 121vh;
+    width: 117vh;
     height: 7vh;
     background-color: #6C8E0AAB;
-    left: 132px;
-    bottom: 25px;
+    left: 220px;
+    bottom: 44px;
 }
 
 #header-text-4{
     position:relative;
     font-family: "Times New Roman", Times, serif;
-    font-size: 2.5vh;
+    font-size: 30px;
     color: white;
     margin-left: 15px;
     top: 5px;
@@ -35,50 +35,50 @@
 
 #header-text-5{
     font-family: "Times New Roman", Times, serif;
-    font-size: 2.5vh;
+    font-size: 30px;
     color: white;
     position: relative;
-    top: 21px;
-    right: 8px;
+    top: 34px;
+    right: 13px;
 }
 
 #header-text-6{
-    font-size: 2.5vh;
+    font-size: 30px;
     color: white;
     font-family: "Times New Roman", Times, serif;
     position: relative;
-    top: 38px;
-    right: 12px;
+    top: 68px;
+    right: 23px;
 }
 
 .Getout{
     position: relative;
-    left: 109vh;
+    left: 105vh;
     top: 8px;
     color: white;
+    font-size: 20px;
    }
  
 .logo{
     position: relative;
-    left: 96vh;
-    top: 8px;
+    left: 90vh;
+    top: 5px;
 }   
 
 .block1{
     position: relative;
-    top: 10vh;
+    top: 50vh;
     width: 125vh;
-    height: 157vh;
+    height: 150vh;
     background-color: #6C8E0AAB;
     border-radius: 20px;
-    left: 8vh;
+    left: 11vh;
 }
 
 .Ordercard{    
     position: relative;
-    height: 60vh;
-    width: 41vh;
-    top: 35px;
+    height: 105vh;
+    width: 80vh;
     border-radius: 20px;
     left: 90px;
     

@@ -7,15 +7,121 @@
     position: relative;
     left: 5px;
     top: 5px;
+    font: bold;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .Add{
     position: relative;
     left: 5px;
+    font: bold;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .Phn{
     position: relative;
     left: 5px;
-    top: 10vh;
+    top: 19vh;
+    font: bold;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
+
+/* .Columns{
+   padding-top: 80px;
+   columns: 10px 3;
+   padding-left: 12px;
+}
+
+.Columns h1{
+    font-size: 20px;
+}
+
+.Columns h2{
+    font-size: 20px;
+}
+
+.Columns h3{
+    font-size: 20px;
+} */
+ 
+/* .Details{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
+.Details h1{
+   font-size: 15px;
+}
+
+.Details h2{
+    font-size: 15px;
+}
+
+.Details h3{
+    font-size: 15px;
+}
+
+.Details h4{
+    font-size: 15px;
+}
+
+.Qty{
+    padding-left: 100px;
+    position: relative;
+    bottom: 103px;
+}
+
+
+.Qty h1{
+    font-size: 15px;
+}
+
+.Qty h2{
+    font-size: 15px;
+}
+
+.Qty h3{
+    font-size: 15px;
+}
+
+.Qty h4{
+    font-size: 15px;
+} */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 30px;
+   
+}
+tr:hover {background-color:#f5f5f5;}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+   
+  }
+
+  #Table{
+      position: relative;
+      top: 140px;
+      left: 30px;
+  }
+
+  .Status{
+      position: relative;
+      top: 132px;
+      width: 538px;
+      right: 2px;
+      background-color: red;
+      color: white;
+      border: none;
+      font-size: 30px;
+  }
+
+ 
