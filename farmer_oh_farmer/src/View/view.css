@@ -14,11 +14,11 @@
 .block{
     position: absolute;
     top: 44%;
-    width: 95vh;
+    width: 96vh;
     height: 83vh;
     background-color: #6C8E0AAB;
     border-radius: 21px;
-    left: 5%;
+    left: 3%;
 }
 
 #header{
@@ -32,7 +32,7 @@
     width: 81vh;
     height: 45%;
     background-color: #6C8E0AAB;
-    left: 126px;
+    left: 110px;
     bottom: 38px;
 }
 

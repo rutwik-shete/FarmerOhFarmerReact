@@ -20,8 +20,8 @@
     width: 117vh;
     height: 7vh;
     background-color: #6C8E0AAB;
-    left: 220px;
-    bottom: 44px;
+    left: 190px;
+    bottom: 45px;
 }
 
 #header-text-4{
@@ -54,15 +54,15 @@
 .Getout{
     position: relative;
     left: 105vh;
-    top: 8px;
+    top: 3px;
     color: white;
     font-size: 20px;
    }
  
 .logo{
     position: relative;
-    left: 90vh;
-    top: 5px;
+    left: 89vh;
+   
 }   
 
 .block1{
@@ -77,7 +77,7 @@
 
 .Ordercard{    
     position: relative;
-    height: 105vh;
+    height: 130vh;
     width: 80vh;
     border-radius: 20px;
     left: 90px;
