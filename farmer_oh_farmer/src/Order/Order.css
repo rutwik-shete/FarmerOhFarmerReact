@@ -84,3 +84,94 @@
     
 }
 
+@media only screen and (min-width: 768px) {
+
+    .Toporder{
+        background-image: url("../assets/BImg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 120vh;
+        width: 89vh;
+        
+    }
+    
+
+
+    #header2{
+        position: relative;
+        width: 26%;
+        height: 9%;
+        background-color: #6C8E0AAB
+    }
+
+    #header-text-4{
+        position:relative;
+        font-family: "Times New Roman", Times, serif;
+        font-size:35px;
+        color: white;
+        margin-left: 11px;
+        top: 2px;
+    }
+    
+    #header-text-5{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 35px;
+        color: white;
+        position: relative;
+        top: 30px;
+        right: 16px;
+    }
+    
+    #header-text-6{
+        font-size: 35px;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        position: relative;
+        top: 59px;
+        right: 31px;
+    }
+
+    #navbox2{
+        position: relative;
+        width: 674px;
+        height: 7vh;
+        background-color: #6C8E0AAB;
+        left: 237px;
+        bottom: 52px;
+    }
+    
+    .Getout{
+        position: relative;
+        left: 54vh;
+        top: 6px;
+        color: white;
+        font-size: 30px;
+       }
+     
+    .logo{
+        position: relative;
+        left: 40vh;
+        height: 35px;
+      
+    }  
+
+    .block1{
+        position: relative;
+        top: 10vh;
+        width: 79vh;
+        height: 90vh;
+        background-color: #6C8E0AAB;
+        border-radius: 20px;
+        left: 5vh;
+    }
+
+    .Ordercard{    
+        position: relative;
+        height: 75vh;
+        width: 56vh;
+        border-radius: 20px;
+        left: 75px;
+        
+    }
+}

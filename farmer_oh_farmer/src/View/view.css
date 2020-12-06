@@ -132,8 +132,7 @@
 .notok{
  position: relative;
  display: grid;
-grid-template-columns: 250px 250px ;
- 
+ grid-template-columns: 250px 250px ;
   width: 250px;
  left: 40px;
 }
@@ -154,4 +153,147 @@ grid-template-columns: 250px 250px ;
     margin: 48px;
     border:none;
     
+}
+
+@media only screen and (min-width: 768px) {
+
+    .image{
+        background-image: url("../assets/BImg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 190vh;
+        width: 101vh;
+        
+    
+    }
+
+
+    #header{
+        width: 24%;
+        height: 7%;
+        background-color: #6C8E0AAB;
+    }
+
+    #header-text-1{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 35px;
+        color: white;
+        margin-left: 14px;
+    }
+    
+    #header-text-2{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 35px;
+        color: white; 
+        position: relative;
+        top: 30px;
+        right: 13px;
+    }
+    
+    #header-text-3{
+        font-size: 35px;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        position: relative;
+        top: 60px;
+        right: 29px;
+    }
+
+
+    #navbox{
+    position: relative;
+    width: 77vh;
+    height: 45%;
+    background-color: #6C8E0AAB;
+    left: 246px;
+    bottom: 65px;
+}
+
+.Linked{
+    position: relative;
+    color: white;
+    font-size: 30px;
+    right: 28vh;
+}
+
+.Linked2{
+    position: relative;
+    color: white;
+    left: 15vh;
+    font-size: 30px;
+}
+
+.out{
+    position: relative;
+    height: 40px;
+    left: 14vh;
+    top: 7px;
+   
+}
+
+#Addpro{
+    position: relative;
+    font-size: 30px;  
+    left: 14vh;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: flex-start;
+    justify-content: space-around;
+    padding-top: 7px;
+   
+    
+}
+
+.block{
+    position: absolute;
+    top: 20%;
+    width: 96vh;
+    height: 170vh;
+    background-color: #6C8E0AAB;
+    border-radius: 21px;
+    left: 2vh;
+}
+
+.notok{
+    position: relative;
+    display: grid;
+   grid-template-columns: 1fr 1fr  ;  
+     width: 90vh;
+    left: 2px;
+   }
+
+   .allok{
+    height: 140px;
+}
+
+.Button{
+    position: relative;
+    width: 245px;
+    left: 120px;
+    bottom: 116px;
+    border-radius: 0px 0px 10px 0px;
+    font-size: 28px;
+}
+
+.notok img{
+    position: relative;
+    height: 139px;
+    width: 12vh;
+    border-radius: 10px 0px 0px 10px;
+    right: 2px;
+    bottom: 1px;
+}
+
+.text{
+    position: relative;
+    left: 140px;
+    bottom: 120px;
+   font-size: 35px;
+}
+
 }

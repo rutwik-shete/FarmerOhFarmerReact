@@ -23,12 +23,12 @@ class Login extends Component{
              </div> 
  
 <div className="Email">
-<input type="text" placeholder="Email" ></input>
+<input type="text" placeholder="Email" className="Gmail" ></input>
 <img src={require("./logos/mail.png")} alt="mailbox" className="maillogo"></img>
 </div>
 
 <div className="Password">
- <input type="text" placeholder="Password" ></input>
+ <input type="text" placeholder="Password" className="Unique" ></input>
  <img src={require("./logos/chavi.png")} alt="key" className="passlogo"></img>
 </div>
 
@@ -40,7 +40,8 @@ class Login extends Component{
 </div>
 
 <div className="signup">
- <button type="submit" className="button2">Create account</button> 
+ <button type="submit" className="button2">
+   <span id="New">Create account</span></button> 
 
 </div>
 </div>

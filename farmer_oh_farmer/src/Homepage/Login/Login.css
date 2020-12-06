@@ -114,10 +114,7 @@ input{
 
 .flexBox{
     display: flex;
-    justify-content: center;
-   
-    
-    
+    justify-content: center;   
 }
 
 .Enter{
@@ -125,3 +122,97 @@ input{
     color: #6C8E0A;
 }
 
+@media only screen and (min-width: 768px) {
+    
+    .main{
+        position: absolute;
+        right: 7%;
+        top: 19%;
+         width: 85%;
+         height: 53vh;
+        background-color: #6C8E0AAB;
+        text-align: center;
+        border-radius: 10px;
+        
+        }
+
+    .Gmail{
+         position: relative;
+         height: 60px;
+         top: 25px;
+         width: 50vh;
+         left: 57px;
+         font-size: 30px;
+         font-family: 'Times New Roman', Times, serif;
+    }
+
+    .Unique{
+        position: relative;
+        height: 60px;
+        top: 30px; 
+        width: 50vh;
+        left: 57px;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+   ::placeholder{
+       position: relative;
+       right: 90px;
+       text-align: left;
+   }
+    .maillogo{
+   
+        height: 30px;
+        position: relative;
+        right: 7vh;
+        bottom: 21px;
+    }
+    .passlogo
+{
+
+    position: relative;
+    right: 7vh;
+    bottom: 21px;
+    height: 40px;;
+}
+    
+    .flexBox{
+        display: flex;
+        justify-content: center;   
+        padding-top: 20vh;
+        padding-right: 30px;
+        
+    }
+
+    .button2{
+        position: relative;
+        bottom: 11vh;
+        left: 40px;
+        width: 27vh;
+        height: 5vh;
+    }
+    
+    .button{
+        position: relative;
+        bottom: 12vh;
+        width: 17vh;
+        height: 5vh;
+        
+       
+    }
+    
+    .Enter{
+        position: center;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif; 
+        
+    }
+
+    #New{
+        position: center;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif; 
+      
+    }
+}

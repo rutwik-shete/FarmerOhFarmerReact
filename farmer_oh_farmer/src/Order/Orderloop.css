@@ -124,4 +124,64 @@ th, td {
       font-size: 30px;
   }
 
- 
+  @media only screen and (min-width: 768px){
+
+
+    .Outer{
+        display:grid;
+        grid-template-columns: 350px 300px;
+    }
+    
+    .Custname{
+        position: relative;
+        left: 20px;
+        top: 5px;
+        font: bold;
+        font-size: 35px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .Add{
+        position: relative;
+        left: 20px;
+        font: bold;
+        font-size: 35px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .Phn{
+        position: relative;
+        left: 20px;
+        top: 12vh;
+        font: bold;
+        font-size: 35px;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 30px;
+       
+    }
+
+    #Table{
+        position: relative;
+        top: 140px;
+        left: 30px;
+    }
+
+    .Status{
+        position: relative;
+        top: 152px;
+        width: 574px;
+        right: 2px;
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: 30px;
+    }
+  
+  }
