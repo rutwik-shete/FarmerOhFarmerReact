@@ -29,7 +29,7 @@
 
 #navbox{
     position: relative;
-    width: 81vh;
+    width: 477px;
     height: 45%;
     background-color: #6C8E0AAB;
     left: 110px;
@@ -116,8 +116,8 @@
 
 .Button{
     position: relative;
-    width: 103px;
-    left: 51px;
+    width: 110px;
+    left: 44px;
     bottom: 71px;
     border-radius: 0px 0px 10px 0px;
 }

@@ -17,7 +17,7 @@
 
 #navbox2{
     position: relative;
-    width: 117vh;
+    width: 690px;
     height: 7vh;
     background-color: #6C8E0AAB;
     left: 190px;
@@ -77,7 +77,7 @@
 
 .Ordercard{    
     position: relative;
-    height: 130vh;
+    height: 136vh;
     width: 80vh;
     border-radius: 20px;
     left: 90px;
