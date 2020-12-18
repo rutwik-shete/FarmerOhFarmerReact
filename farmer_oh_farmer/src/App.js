@@ -7,6 +7,7 @@ import View from './View/view';
 import Order from './Order/Order';
 import Login from './Homepage/Login/Login';
 import Signup from './SignUpPage/Signup';
+import AddProduct from './Add product/AddProduct';
 
 class App extends Component{
 
@@ -15,21 +16,23 @@ class App extends Component{
 return(
 
     <div>
-      <Signup></Signup>
+      <AddProduct></AddProduct>
+    {/* <Signup></Signup>  */}
   
      {/* <Router>
-       <Switch>
+     <Switch>
      <Route path="/" exact component={Login} />
      <Route path="/view"  component={View} />
      <Route path="/Order" component={Order} />
      <Route path="/Login" component={Login} />
 
      </Switch>
-     </Router>  */}
-   
+     </Router>  
+    */}
 
    
    </div>
+   
  
   );
         }
