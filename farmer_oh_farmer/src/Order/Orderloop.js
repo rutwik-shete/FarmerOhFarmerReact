@@ -43,6 +43,7 @@ class Orderloop extends Component{
                       </div>
                       </div>
                        */}
+                       <CardBody className="Tablebody">
                       <span id="Table">
                        <table>
                         <tr>
@@ -77,6 +78,8 @@ class Orderloop extends Component{
                          </tr>
                        </table>
                        </span>
+                       </CardBody>
+            
                        <button color="Red" className="Status">
                         {ord.status} 
                       </button>

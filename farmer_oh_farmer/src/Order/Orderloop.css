@@ -1,3 +1,4 @@
+
 .Outer{
     display:grid;
     grid-template-columns: 350px 300px;
@@ -30,68 +31,7 @@
     
 }
 
-/* .Columns{
-   padding-top: 80px;
-   columns: 10px 3;
-   padding-left: 12px;
-}
 
-.Columns h1{
-    font-size: 20px;
-}
-
-.Columns h2{
-    font-size: 20px;
-}
-
-.Columns h3{
-    font-size: 20px;
-} */
- 
-/* .Details{
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-
-.Details h1{
-   font-size: 15px;
-}
-
-.Details h2{
-    font-size: 15px;
-}
-
-.Details h3{
-    font-size: 15px;
-}
-
-.Details h4{
-    font-size: 15px;
-}
-
-.Qty{
-    padding-left: 100px;
-    position: relative;
-    bottom: 103px;
-}
-
-
-.Qty h1{
-    font-size: 15px;
-}
-
-.Qty h2{
-    font-size: 15px;
-}
-
-.Qty h3{
-    font-size: 15px;
-}
-
-.Qty h4{
-    font-size: 15px;
-} */
 
 table{
     width: 100%;
@@ -123,6 +63,7 @@ th, td {
       border: none;
       font-size: 30px;
   }
+
 
   @media only screen and (min-width: 768px){
 
@@ -184,4 +125,73 @@ th, td {
         font-size: 30px;
     }
   
+  }
+
+  @media only screen and (min-width: 1000px){
+
+
+    .Outer{
+        display:grid;
+        grid-template-columns: 350px 300px;
+    }
+    
+    .Custname{
+        position: relative;
+        left: 20px;
+        top: 5px;
+        font: bold;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .Add{
+        position: relative;
+        left: 20px;
+        font: bold;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .Phn{
+        position: relative;
+        left: 20px;
+        top: 2vh;
+        font: bold;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 20px;
+       
+       
+    }
+
+    #Table{
+        position: relative;
+        left: 30px;
+        
+    }
+
+    .Tablebody{
+        position: relative;
+        bottom: 140px;
+    }
+
+    .Status{
+        position: relative;
+        width: 444px;
+        right: 2px;
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: 30px;
+        top: 1px;
+
+       
+    }
   }

@@ -1,218 +1,171 @@
+
+@media only screen and (min-width: 320px) {
 .bgimage{
-    background-image: url("../../assets/BImg.png");
+   background-image: url("../../assets/BgImage.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
     height: 100vh;
-
 }
 
 
-.main{
-position: absolute;
-right: 14%;
-top: 19%;
- width: 70%;
- height: 53vh;
-background-color: #6C8E0AAB;
-text-align: center;
-border-radius: 10px;
-
-}
-
-.passlogo
-{
-
+.Main{
     position: relative;
-    right: 14vh;
-    bottom: 25px;
-    height: 21px;;
-}
-
-.maillogo{
-   
-    height: 16px;
-    position: relative;
-    right: 14vh;
-    bottom: 25px;
-}
-
-::placeholder{
- position: relative;
-}
-
-input{
-
-    position: relative;
-    font: bold;
-    border-radius: 10px;
-    border-style: dotted;
-    border-color: white;
-    width: 36vh;
-    right: 6px;
+    top: 10%;
+    left: 8%;
+  width: 85%;
+  height: 70%;
+  background-color: #6C8E0AAB;
     
-
-}
-
-.signup{
-    margin: 15px;
-
-}
-
-.submit{
-    margin: 15px;
-  
-    color: #6C8E0A;
-}
-
-
-
-.Password{
-    position: relative;
-    font: message-box;
-    width: 33vh;
-    left: 20px;   
-}
-
-.Email{
-    position: relative;
-    font: message-box;
-    width: 33vh;
-    left: 20px;
-
 
 }
 
 .Heading{
-    margin: 35px;
-    color: white  
+ text-align: center;
+ color: white;
 }
 
-.button{
-    position: relative;
-     border-radius: 10px;
-    height: 31px;
-    width: 73px;
-    border-style: dotted;
-    border-color: white;
-    color: #6C8E0A;
-    bottom: 12px;
-    left: 5px;
+.Email{
+    margin-top: 16%;
+    margin-left: 10%;
     
-} 
-
-
-.button2{
-    color: #6C8E0A;
-    height: 30px;
-    width: 130px;
-    font: message-box;
-    border-radius: 10px;
-    border-style: dotted;
-    border-color: white;
 }
+
+.Gmail{
+    width: 90%;
+    padding-right: 29%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.Password{
+    margin-top: 16%;
+    margin-left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.Unique{
+    width: 90%;
+    padding-right: 17%;
+}
+
 
 .flexBox{
     display: flex;
-    justify-content: center;   
-}
-
-.Enter{
-    font: message-box;
-    color: #6C8E0A;
-}
-
-@media only screen and (min-width: 768px) {
+    margin-top: 16%;
     
-    .main{
-        position: absolute;
-        right: 7%;
-        top: 19%;
-         width: 85%;
-         height: 53vh;
-        background-color: #6C8E0AAB;
-        text-align: center;
-        border-radius: 10px;
+
+}
+
+.flexBox > div{
+  margin: 7%;
+
+}
+
+.New{
+   color: green;
+    border: none;
+}
+
+.New:hover{
+    background-color: black;
+}
+.Enter{
+    border: none;
+}
+.Enter:hover{
+   background-color: black;
+}
+
+.Color{
+    
+    color:green;
+}
+
+input[type='text']{
+    background-image: url("../Login/logos/mail.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 2%;
+}
+
+input[type='notext']{
+    background-image: url("../Login/logos/chavi.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 2%;
+}
+
+}
+
+
+
+@media only screen and (min-width: 575px) {
+    
+    .Password{
+        margin-top: 10%;
+    }
+
+    .flexBox{
+        margin-left: 15%;
+    }
+    
+}
+
+ @media only screen and (min-width: 768px) {
+
+    .Email{
+        margin-top: 10%;
         
-        }
+    }
 
     .Gmail{
-         position: relative;
-         height: 60px;
-         top: 25px;
-         width: 50vh;
-         left: 57px;
-         font-size: 30px;
-         font-family: 'Times New Roman', Times, serif;
-    }
+        height: 5h; 
+        padding-right: 59%;
+   
+} 
 
     .Unique{
-        position: relative;
-        height: 60px;
-        top: 30px; 
-        width: 50vh;
-        left: 57px;
-        font-size: 30px;
-        font-family: 'Times New Roman', Times, serif;
+        height: 5vh;
+        padding-right: 55%;
+        
     }
-
-   ::placeholder{
-       position: relative;
-       right: 90px;
-       text-align: left;
-   }
-    .maillogo{
-   
-        height: 30px;
-        position: relative;
-        right: 7vh;
-        bottom: 21px;
-    }
-    .passlogo
-{
-
-    position: relative;
-    right: 7vh;
-    bottom: 21px;
-    height: 40px;;
-}
-    
     .flexBox{
-        display: flex;
-        justify-content: center;   
-        padding-top: 20vh;
-        padding-right: 30px;
-        
+        margin-top: 5%;
     }
 
-    .button2{
-        position: relative;
-        bottom: 11vh;
-        left: 40px;
-        width: 27vh;
-        height: 5vh;
+    .flexBox > div{
+        margin: 10%;
     }
-    
-    .button{
-        position: relative;
-        bottom: 12vh;
-        width: 17vh;
-        height: 5vh;
-        
-       
-    }
-    
-    .Enter{
-        position: center;
-        font-size: 40px;
-        font-family: 'Times New Roman', Times, serif; 
-        
-    }
+ 
+ }
 
-    #New{
-        position: center;
-        font-size: 40px;
-        font-family: 'Times New Roman', Times, serif; 
-      
-    }
-}
+ @media only screen and (min-width: 1024px){
+     .Main{
+         width: 50%;
+         margin-left: 35%;
+     }
+     
+     .Gmail{
+         padding-left: 5%;
+     }
+
+     .Unique{
+         padding-left: 6%;
+     }
+
+
+     .flexBox >  div{
+         margin:10%;
+     }
+ }
+
+ @media only screen and (min-width: 1600px){
+     .Main{
+         width: 30%;
+         height: 60%;
+         margin-left: 55%;
+     }
+ }

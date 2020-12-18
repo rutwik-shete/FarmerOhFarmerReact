@@ -16,40 +16,40 @@ class Login extends Component{
     return(   
     
       <div className="bgimage">   
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-      <div className="main"> 
+      <div className="Main"> 
       <div className="Heading"> 
             <h1>LOGIN</h1>
              </div> 
  
 <div className="Email">
-<input type="text" placeholder="Email" className="Gmail" ></input>
-<img src={require("./logos/mail.png")} alt="mailbox" className="maillogo"></img>
+<input type="text" placeholder="Email" className="Gmail" >
+</input>
+{/* <img src={require("./logos/mail.png")} alt="mailbox" className="Maillogo"></img> */}
+
 </div>
 
 <div className="Password">
- <input type="text" placeholder="Password" className="Unique" ></input>
- <img src={require("./logos/chavi.png")} alt="key" className="passlogo"></img>
-</div>
+ <input type="notext" placeholder="Password" className="Unique" ></input>
+ {/* <img src={require("./logos/chavi.png")} alt="key" className="Passlogo"></img> */}
+
+ </div>
 
 <div className="flexBox">
-<div className="submit">
-  <button type="submit" className="button">
- <Link to='/view' className="Enter">submit</Link>
+
+<div className="Submit">
+  <button type="submit" className="Enter" >
+ <Link to='/view' className="Color">submit</Link>
  </button>
 </div>
 
-<div className="signup">
- <button type="submit" className="button2">
-   <span id="New">Create account</span></button> 
+<div className="Signup">
+ <button type="submit" className="New" >
+   Create account</button> 
 
 </div>
-</div>
-      
-       </div>
-       
-    
-       </div>
+</div>    
+</div>     
+   </div>
       
 );
   }

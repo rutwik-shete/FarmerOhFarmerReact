@@ -9,22 +9,15 @@ class Loopimg extends Component {
 render(){  
     return(
     <div className="products">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+          
   
-  <div className="notok">
+
   
           {this.props.imgData.map((imgData) => (
-              <Card className="allok">
-            <CardImg src={require(`${imgData.src}`)}/>
-            <CardText className="text">
-                {imgData.rate}
-                {imgData.price}
+              <div className="Container">
+                <img src={require(`${imgData.src}`)}></img>
 
-                </CardText>
-           <button className="Button">Remove</button>
-           
-            </Card> 
-           
+           </div>
           ))};
      
       
@@ -39,17 +32,10 @@ render(){
 
 
 
- {/* { this.props.imgData.map((imgData,idx) => (
-//        <div className="product" key={idx}>
-//         <img src={require(`${imgData.src}`)}></img>
-//         <h1>{imgData.rate}</h1>
-//         <h2>{imgData.price}</h2>
-//         <button>Remove</button>
-        </div> */}
-    {/* ))}; */}
-   </div>
-    );
+    )
+  
 }
+
     
 }
 

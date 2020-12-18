@@ -17,32 +17,32 @@ class View extends Component{
          src:'./images/tomatoes.jpg' ,
          price:"60Rs",
        },
-       {
-         rate:"250gm/",
-         src:'./images/tomatoes.jpg',
-         price:"60Rs"
-       },
-       {
-         rate:"250gm/",
-         src:'./images/tomatoes.jpg',
-         price:"60Rs"
+      //  {
+      //    rate:"250gm/",
+      //    src:'./images/tomatoes.jpg',
+      //    price:"60Rs"
+      //  },
+      //  {
+      //    rate:"250gm/",
+      //    src:'./images/tomatoes.jpg',
+      //    price:"60Rs"
 
-       },
-       {
-        rate:"250gm/",
-        src:'./images/tomatoes.jpg',
-        price:"60Rs"
-       },
-       {
-        rate:"250gm/",
-        src:'./images/tomatoes.jpg',
-        price:"60Rs"
-       },
-       {
-        rate:"250gm/",
-        src:'./images/tomatoes.jpg',
-        price:"60Rs"
-       },
+      //  },
+      //  {
+      //   rate:"250gm/",
+      //   src:'./images/tomatoes.jpg',
+      //   price:"60Rs"
+      //  },
+      //  {
+      //   rate:"250gm/",
+      //   src:'./images/tomatoes.jpg',
+      //   price:"60Rs"
+      //  },
+      //  {
+      //   rate:"250gm/",
+      //   src:'./images/tomatoes.jpg',
+      //   price:"60Rs"
+      //  },
         
      ],
   }

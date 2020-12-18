@@ -28,8 +28,8 @@ return(
      <Route path="/Login" component={Login} />
      {/* <Route path="/Signup" component={SignUp} /> */}
 
-      </Switch>
-     </Router>   
+     </Switch>
+     </Router>    
    
 
    
