@@ -1,28 +1,93 @@
-
-.image{
+@media only screen and (min-width:320px){
+.Image{
     background-image: url("../assets/BImg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 190vh;
-    width: 100vh;
-    
-
+    width: 100%;
+    height: 100vh;
 }
 
 
 
 .block{
-    position: absolute;
-    top: 44%;
-    width: 96vh;
-    height: 83vh;
-    background-color: #6C8E0AAB;
-    border-radius: 21px;
-    left: 3%;
+    position: relative;
+    left: 5%;
+    top: 12%;
+    width: 90%;
+    height: 84%;
+    background-color: #6C8E0AAB;  
+    border-radius: 10px; 
 }
 
 #header{
+    position: relative;
+    bottom: 15%;
+    right: 6%;
+    width: 37%;
+    height: 10%;
+    background-color: #6C8E0AAB;
+}
+
+#header-text-1{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5vh;
+    color: white;
+    padding-left: 2px;
+    
+   
+}
+
+#header-text-2{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5vh;
+    color: white; 
+    position: relative;
+    top: 13px;
+    right: 7px;
+}
+
+
+
+#header-text-3{
+    font-size: 2.5vh;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    position: relative;
+    top: 27px;
+    right: 11px;
+}
+
+#navbox{
+    position: relative;
+    bottom: 103%;
+    left: 100%;
+    width: 201.5%;
+    height: 50%;
+    background-color: #6C8E0AAB;
+}
+
+#Addpro {
+    font-size: 14px;
+    color:white;
+    
+}
+
+.Linked{
+    font-size: 14px;
+    padding-left: 20px;
+    color:white;
+}
+
+.Linked2{
+    font-size: 14px;
+    padding-left:10px;
+    color:white;
+}
+
+
+
+/* #header{
     width: 19%;
     height: 6%;
     background-color: #6C8E0AAB;
@@ -127,8 +192,87 @@
     position: relative;
     left: 59px;
     bottom: 65px;
+} */
+
+
 }
 
+@media only screen and (min-width:575px){
+    #navbox{
+     bottom: 172%;
+     width:69.7vh
+        
+    }
+    #header{
+        width: 25%;
+    }
+
+    #header-text-1{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 2.5vh;
+        color: white;
+        padding-left: 12px;
+        
+        
+       
+    }
+    
+    #header-text-2{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 2.5vh;
+        color: white; 
+    
+        top: 13px;
+        right: 7px;
+    }
+    
+    
+    
+    #header-text-3{
+        font-size: 2.5vh;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+       
+        top: 27px;
+        right: 11px;
+    }
+
+  #Addpro{
+      padding-left: 50px;
+  }
+
+  .Linked{
+      padding-left: 50px;
+  }
+
+  .Linked2{
+      padding-left: 80px;
+  }
+}
+
+@media only screen and (min-width:768px){
+    #header{
+        width: 18%;
+    }
+
+    #navbox{
+        width:99.2vh;
+        bottom: 231%;
+    }
+    #Addpro{
+        padding-left: 100px;
+    }
+  
+    .Linked{
+        padding-left:120px;
+    }
+  
+    .Linked2{
+        padding-left: 120px;
+    }
+}
+
+@media only screen and (min-width:1024px){
 
 
-
+}

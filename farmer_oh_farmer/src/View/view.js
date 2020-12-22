@@ -50,39 +50,28 @@ class View extends Component{
    
     return(
     
-    <div className="Top">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
- 
-     <div className="image">
-     
+    
+     <div className="Image">
+      
+      <div className="block"> 
      <div id="header">
-      <span id="header-text-1">Farmer</span>
+     <span id="header-text-1">Farmer</span>
       <span id="header-text-2">Oh</span>
       <span id="header-text-3">Farmer</span>
-     
      <div id="navbox">
-      <div className="flexbox">
+       <div className="flexBox">
      <span id="Addpro">Addproduct</span> 
-       {/* <span id="Vieword">View order</span> */}
         <Link to='/Order' className="Linked">Vieworder</Link>
-       <img src={require("../Homepage/Login/logos/logout.png")} className="out" />
-       {/* <span id="Signout">LogOut</span> */}
+       {/* <img src={require("../Homepage/Login/logos/logout.png")} className="out" /> */}
        <Link to='/Login' className="Linked2">Logout</Link>
+ 
+      </div>
        </div>
       </div>
-      </div> 
-    
-      <div className="block">    
+      </div>   
       <Loopimg imgData={this.state.img} />
       </div>       
-      </div>
-     </div>
      
-  
-   
-  
-
-   
     );
 }
 }

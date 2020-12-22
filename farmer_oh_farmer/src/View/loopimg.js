@@ -13,13 +13,13 @@ render(){
   
 
   
-          {this.props.imgData.map((imgData) => (
+          {/* {this.props.imgData.map((imgData) => (
               <div className="Container">
                 <img src={require(`${imgData.src}`)}></img>
 
            </div>
           ))};
-     
+      */}
       
       </div>
       
