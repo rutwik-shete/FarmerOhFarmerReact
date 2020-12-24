@@ -1,5 +1,52 @@
-
 .Outer{
+    display: grid;
+    grid-template-columns: auto auto;
+   
+}
+
+
+.Extend{
+    position: relative;
+    left: 24%;
+    top: 5%;
+    width: 50%;
+    height: 70vh;
+    background-color: white;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+}
+
+#Table{
+    position: absolute;
+    top: 23%;
+    left: 15%;
+}
+
+.Upper{
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.Status{
+    position:absolute;
+    top: 95.5%;
+    width: 43.3vh;
+    border-radius: 0px 0px 10px 10px;
+    border-style: solid;
+    background-color: red;
+    color: white ;
+}
+
+
+
+
+
+
+/* .Outer{
     display:grid;
     grid-template-columns: 350px 300px;
 }
@@ -62,10 +109,10 @@ th, td {
       color: white;
       border: none;
       font-size: 30px;
-  }
+  } */
 
 
-  @media only screen and (min-width: 768px){
+  /* @media only screen and (min-width: 768px){
 
 
     .Outer{
@@ -194,4 +241,4 @@ th, td {
 
        
     }
-  }
+  } */
