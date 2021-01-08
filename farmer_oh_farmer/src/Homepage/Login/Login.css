@@ -1,157 +1,171 @@
+
+@media only screen and (min-width: 320px) {
 .bgimage{
-    background-image: url("../../assets/BgImage.png");
+   background-image: url("../../assets/BgImage.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
     height: 100vh;
-
 }
 
 
-.main{
-position: absolute;
-right: 10%;
-top: 19%;
- width: 400px;
- height: 437px;
-background-color: #6C8E0AAB;
-text-align: center;
-
-}
-
-.passlogo
-{
-
+.Main{
     position: relative;
-    top: 0px;
-    right: 295px;
-    height: 21px;;
-}
-
-.maillogo{
-   
-    height: 16px;
-    position: relative;
-    top: 1px;
-    right: 296px;
-}
-
-::placeholder{
-
-    color: #6C8E0A;
-    padding-left: 40px;
-    font: bold;
-    font: message-box;
-    position: relative;
-    top: 3px;
-}
-
-input{
-
-    height: 30px;
-    font: bold;
-    border-radius: 10px;
-    border-style: dotted;
-    border-color: white;
-    position: relative;
-    left: 13px;
-
-}
-
-.signup{
-    margin: 15px;
-/* 
-    position: relative;
-    top: 212px;
-    left: 168px; */
-}
-
-.submit{
-    margin: 15px;
-    /* position: relative;
-    top: 234px; */
-    color: #6C8E0A;
-}
-
-.checkbox{
-
-    position: relative;
-    top: 191px;
-
-}
-
-.password{
-    font: message-box;
-    border-radius: 10px;
-
-/* 
-
-    position: relative;
-    top: 155px;
-    left: 6px; */
+    top: 10%;
+    left: 8%;
+  width: 85%;
+  height: 70%;
+  background-color: #6C8E0AAB;
     
-}
 
-.email{
-    margin: 15px;
-    font: message-box;
-
-/* 
-    position: relative;
-    top: 142px;
-    left: 6px; */
 }
 
 .Heading{
-    /* position: relative;
-    top: 89px;
-    left: 86px; */
-    margin: 35px;
-    color: white;
+ text-align: center;
+ color: white;
+}
 
+.Email{
+    margin-top: 16%;
+    margin-left: 10%;
     
-
-    
 }
 
-.button{
-     border-radius: 10px;
-    height: 31px;
-    width: 100px;
-    border-style: dotted;
-    border-color: white;
-    color: #6C8E0A;
-} 
-
-.button3{
-    width: 90px;
-    height: 30px;
-    color: #6C8E0A;
-    font: message-box;
-    border-radius: 10px;
-    border-style: dotted;
-    border-color: white;
-
+.Gmail{
+    width: 90%;
+    padding-right: 29%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
 }
 
-.button2{
-    color: #6C8E0A;
-    height: 30px;
-    width: 150px;
-    font: message-box;
-    border-radius: 10px;
-    border-style: dotted;
-    border-color: white;
+.Password{
+    margin-top: 16%;
+    margin-left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
 }
+
+.Unique{
+    width: 90%;
+    padding-right: 17%;
+}
+
 
 .flexBox{
     display: flex;
-    justify-content: center;
-    margin: 20px;
+    margin-top: 16%;
+    
+
+}
+
+.flexBox > div{
+  margin: 7%;
+
+}
+
+.New{
+   color: green;
+    border: none;
+}
+
+.New:hover{
+    background-color: black;
+}
+.Enter{
+    border: none;
+}
+.Enter:hover{
+   background-color: black;
+}
+
+.Color{
+    
+    color:green;
+}
+
+input[type='text']{
+    background-image: url("../Login/logos/mail.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 2%;
+}
+
+input[type='notext']{
+    background-image: url("../Login/logos/chavi.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 2%;
+}
+
+}
+
+
+
+@media only screen and (min-width: 575px) {
+    
+    .Password{
+        margin-top: 10%;
+    }
+
+    .flexBox{
+        margin-left: 15%;
+    }
     
 }
 
-.Enter{
-    font: message-box;
-    color: #6C8E0A;
-}
+ @media only screen and (min-width: 768px) {
+
+    .Email{
+        margin-top: 10%;
+        
+    }
+
+    .Gmail{
+        height: 5h; 
+        padding-right: 59%;
+   
+} 
+
+    .Unique{
+        height: 5vh;
+        padding-right: 55%;
+        
+    }
+    .flexBox{
+        margin-top: 5%;
+    }
+
+    .flexBox > div{
+        margin: 10%;
+    }
+ 
+ }
+
+ @media only screen and (min-width: 1024px){
+     .Main{
+         width: 50%;
+         margin-left: 35%;
+     }
+     
+     .Gmail{
+         padding-left: 5%;
+     }
+
+     .Unique{
+         padding-left: 6%;
+     }
+
+
+     .flexBox >  div{
+         margin:10%;
+     }
+ }
+
+ @media only screen and (min-width: 1600px){
+     .Main{
+         width: 30%;
+         height: 60%;
+         margin-left: 55%;
+     }
+ }

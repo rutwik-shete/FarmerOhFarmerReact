@@ -1,15 +1,10 @@
-/* .products{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}*/
-/* 
-.product img{
-    width: 50%;
-    
+.Container{
+    width: 50vh;
+    height: 18vh;
+    background-color: white;
 }
 
-.product{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   width: 50%;
-} */
+.Container img{
+    height: 18vh;
+    
+}

@@ -1,97 +1,92 @@
+
 .image{
     background-image: url("../assets/BImg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-    opacity: 95%;
-    width: 92%;
-    margin: auto;
-
+    height: 190vh;
+    width: 100vh;
+    
 
 }
 
-.Top{
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-}
+
 
 .block{
     position: absolute;
-    right: 18%;
-    top: 15%;
-    width: 125vh;
+    top: 44%;
+    width: 96vh;
     height: 83vh;
     background-color: #6C8E0AAB;
     border-radius: 21px;
+    left: 3%;
 }
 
 #header{
-    width: 17%;
-    height: 16%;
+    width: 19%;
+    height: 6%;
     background-color: #6C8E0AAB;
 }
 
 #navbox{
     position: relative;
-    width: 155vh;
-    height: 37%;
+    width: 477px;
+    height: 45%;
     background-color: #6C8E0AAB;
-    left: 250px;
-    bottom: 50px;
+    left: 110px;
+    bottom: 38px;
 }
 
 #header-text-1{
     font-family: "Times New Roman", Times, serif;
-    font-size: 2.1em;
+    font-size: 2.5vh;
     color: white;
-    /* left: 10px; */
-    margin-left: 26px;
+    margin-left: 10px;
 }
 
 #header-text-2{
     font-family: "Times New Roman", Times, serif;
-    font-size: 2.1em;
-    color: white;
-    /* margin-top: 2px; */
-    /* padding-top: 10px; */
+    font-size: 2.5vh;
+    color: white; 
     position: relative;
-    top: 28px;
-    /* margin: auto; */
-    /* margin-top: 2px; */
-    right: 12px;
+    top: 17px;
+    right: 7px;
 }
 
 #header-text-3{
-    font-size: 2.1em;
+    font-size: 2.5vh;
     color: white;
     font-family: "Times New Roman", Times, serif;
     position: relative;
-    top: 60px;
-    right: 21px;
+    top: 35px;
+    right: 11px;
 }
 
 .Linked2{
     position: relative;
     color: white;
-    left: 13vh;
+    left: 11vh;
+    font-size: 2.5vh;
 }
  
 #Addpro{
       position: relative;
-    left: 94vh;
+      font-size: 2.5vh;  
+      left: 10vh;
 }
  
 .Linked{
     position: relative;
     color: white;
-    left: 69vh;
+    font-size: 2.5vh;
+    right: 26vh;
 }
 
 .out{
      position: relative;
-     left: 44vh;
+     height: 24px;
+     left: 10vh;
+     
 }
  
 
@@ -108,8 +103,8 @@
 
 .notok img{
     position: relative;
-    height: 80px;
-    width: 10vh;
+    height: 70px;
+    width: 8vh;
     border-radius: 10px 0px 0px 10px;
     right: 2px;
     bottom: 1px;
@@ -122,42 +117,18 @@
 
 .Button{
     position: relative;
-    width: 121px;
-    left: 77px;
-    bottom: 9vh;
+    width: 110px;
+    left: 44px;
+    bottom: 71px;
     border-radius: 0px 0px 10px 0px;
 }
 
 .text{
     position: relative;
-    left: 93px;
+    left: 59px;
     bottom: 65px;
-
 }
 
 
-.notok{
- position: relative;
- display: grid;
- grid-template-columns: auto auto auto ;
- min-width: 112vh;
- left: 49px;
-}
 
-.allok{
-    height: 79px;
-}
 
-.card{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 25vh;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-    margin: 48px;
-    border: black;
-  border-radius: 10px;
-}
