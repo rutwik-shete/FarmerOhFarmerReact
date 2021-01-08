@@ -29,25 +29,25 @@ class Order extends Component{
            status:"PENDING"
                
          },
-        //  {
-        //   name:"Atharva Tuljapurkar",
-        //   address:"A-504,Sai Niwas,Dhayari",
-        //   phone:"8999052763",
-        //   product:"Tomato",
-        //   qty:"2KG",
-        //   cost:"240",
-        //   product2:"Onion",
-        //   qty2:"2KG",
-        //   cost2:"300",
-        //   product3:"Carrot",
-        //   qty3:"2KG",
-        //   cost3:"150",
-        //   product4:"Garlic",
-        //   qty4:"2KG",
-        //   cost4:"50",
-        //   status:"DELIVERED"
+         {
+          name:"Atharva Tuljapurkar",
+          address:"A-504,Sai Niwas,Dhayari",
+          phone:"8999052763",
+          product:"Tomato",
+          qty:"2KG",
+          cost:"240",
+          product2:"Onion",
+          qty2:"2KG",
+          cost2:"300",
+          product3:"Carrot",
+          qty3:"2KG",
+          cost3:"150",
+          product4:"Garlic",
+          qty4:"2KG",
+          cost4:"50",
+          status:"DELIVERED"
           
-        //  }
+         }
 
        ],
     //    Customer : [
@@ -77,8 +77,6 @@ class Order extends Component{
      return(
     
         <div className="Toporder">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
         <div id="header2">
       <span id="header-text-4">Farmer</span>
       <span id="header-text-5">Oh</span>

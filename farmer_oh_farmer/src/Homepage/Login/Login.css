@@ -60,7 +60,7 @@
 }
 
 .flexBox > div{
-  margin: 7%;
+  margin: 8%;
 
 }
 
@@ -104,6 +104,12 @@ input[type='notext']{
 
 @media only screen and (min-width: 575px) {
     
+    .Main{
+        width: 55%;
+        height: 76%;
+        padding-top: 10%;
+        margin-left: 30%;
+    }
     .Password{
         margin-top: 10%;
     }
@@ -115,45 +121,44 @@ input[type='notext']{
 }
 
  @media only screen and (min-width: 768px) {
+.Main{
+    width: 50%;
+    height: 80%;
+    padding-top: 7%;
+    margin-left: 35%;
+}
 
-    .Email{
-        margin-top: 10%;
-        
-    }
+ 
 
     .Gmail{
         height: 5h; 
-        padding-right: 59%;
+        padding-right: 47%;
    
 } 
 
     .Unique{
         height: 5vh;
-        padding-right: 55%;
+        padding-right: 40%;
         
     }
-    .flexBox{
-        margin-top: 5%;
-    }
-
-    .flexBox > div{
-        margin: 10%;
-    }
+  
  
  }
 
  @media only screen and (min-width: 1024px){
      .Main{
-         width: 50%;
-         margin-left: 35%;
+         width: 40%;
+         margin-left: 49%;
+         height: 80%;
+         padding-top: 7%;
      }
      
      .Gmail{
-         padding-left: 5%;
+         padding-left: 10%;
      }
 
      .Unique{
-         padding-left: 6%;
+         padding-left: 10%;
      }
 
 
@@ -162,10 +167,30 @@ input[type='notext']{
      }
  }
 
- @media only screen and (min-width: 1600px){
+ @media only screen and (min-width: 1440px){
      .Main{
          width: 30%;
-         height: 60%;
+         height: 75%;
          margin-left: 55%;
+         padding-top: 2%;
      }
+
+     .Gmail{
+         padding-left: 10%;
+     }
+
+     .Unique{
+         padding-left: 10%;
+     }
+ }
+
+ @media only screen and (min-width:1690px){
+     
+    .Gmail{
+        height: 5vh;
+    }
+
+    .flexBox{
+        width: 90%;
+    }
  }

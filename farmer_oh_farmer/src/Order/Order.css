@@ -11,7 +11,7 @@
 
 #header2{
     position: relative;
-    width: 22%;
+    width: 23%;
     height: 7%;
     background-color: #6C8E0AAB;
 }
@@ -269,4 +269,9 @@
         left: 75px;
         
     }
+}
+
+.block1{
+    width:85%;
+
 }
