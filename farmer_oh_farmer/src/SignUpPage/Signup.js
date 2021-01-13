@@ -6,9 +6,9 @@ class Signup extends Component {
         super(props)
 
         this.state = {
-            Name: "",
+            name: "",
             password: "",
-            confirmpassword: "",
+            confirmPassword: "",
             address: "",
             phonenumber: "",
             pincode: "",
@@ -18,9 +18,9 @@ class Signup extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    firsthandler = (event) => {
+    namehandler = (event) => {
         this.setState({
-            firstName: event.target.value
+            name: event.target.value
         })
     }
     passwordhandler = (event) => {
@@ -30,7 +30,7 @@ class Signup extends Component {
     }
     confirmpasswordhandler = (event) => {
         this.setState({
-            confirmpassword: event.target.value
+            confirmPassword: event.target.value
         })
     }
     addresshandler = (event) => {
@@ -81,26 +81,26 @@ class Signup extends Component {
                                 <h1>Register And Start Selling</h1>
                             </div>
                                 <div classname="firstname"> 
-                                    <input type="text" value={this.state.firstName} onChange={this.firsthandler} placeholder="Name/CompanyName/GroupName" size="50" /><br />
+                                    <input type="text" value={this.state.name} onChange={this.firsthandler} placeholder="Name/CompanyName/GroupName" size="50" required/><br />
                                 </div>
                                 <div className="password">
-                                    <input type="password" value={this.state.lastName} onChange={this.passwordhandler} placeholder="Password" size="37"/><br />
+                                    <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Password" id="password" size="50" required/><br />
                                 </div>
                                 <div classname="confirmpassword">
-                                    <input type="confirmpassword" value={this.state.password} onChange={this.confirmpasswordhandler} placeholder="Confirm Passsword"size="50" /><br />
+                                    <input type="password" value={this.state.confirmPassword} onChange={this.confirmpasswordhandler} placeholder="Confirm Passsword" id="confirm_password" size="50" required /><br />
                                 </div>
                                 <div className="address">
-                                    <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50"/><br />
+                                    <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50" /><br />
                                 </div>
                                 <div className="email">
-                                    <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Email" size="37"/><br />
+                                    <input type="text" value={this.state.email} onChange={this.emailhandler} placeholder="Email" size="50" /><br />
                                 </div>
                                 <div className="flexbox">
                                     <div className="phonenumber">
-                                        <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber"/><br />
+                                        <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber" required/><br />
                                     </div>
                                     <div className="pincode">
-                                        <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder=" PinCode" maxlength="6" size="20"/><br />
+                                        <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder=" PinCode" maxlength="6" size="20" required/><br />
                                     </div>
                                 </div>
                                 <div className="submit">
