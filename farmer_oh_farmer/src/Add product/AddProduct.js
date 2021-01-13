@@ -1,17 +1,5 @@
 import React, {Component} from 'react';
-
 import './AddProduct.css';
-import {Link}  from 'react-router-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import Dropdown from 'react-dropdown';
-import DropdownButton from 'react-dropdown';
-
-
-
-
-
-
 
 
 
@@ -43,7 +31,7 @@ handle(event)
                         </div>
                 </div>
                 <div>
-                    <img src={require("../Homepage/Login/logos/logout.png")} className="logo" />
+                    <img src={require("../Homepage/Login/logos/logout.png")} className="logo" alt="Display" />
                 </div>
                     <div className="Box">
                         <select className="chooseproduct">

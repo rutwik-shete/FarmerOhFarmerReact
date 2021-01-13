@@ -25,23 +25,20 @@ return(
 
 
     <div>
-  
-  
+
+     <Router>
+     <Switch>
+
+     <Route path="/" exact component={Login} />
+     <Route path="/view"  component={View} />
+      <Route path="/Order" component={Order} />
+      <Route path="/Login" component={Login} />
+      <Route path="/AddProduct" component={AddProduct} />
+      <Route path="/Signup" component={Signup} />
      
-   
-
-  
-    // <Router>
-    // <Switch>
-
-    //   <Route path="/" exact component={Login} />
-    //   <Route path="/view"  component={View} />
-    //   <Route path="/Order" component={Order} />
-    //   <Route path="/Login" component={Login} />
-    //   {/* <Route path="/Signup" component={SignUp} />  */}
     
-    // </Switch>
-    // </Router>
+     </Switch>
+     </Router>
 
     </div>
    

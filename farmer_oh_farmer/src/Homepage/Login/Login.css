@@ -26,37 +26,9 @@
  color: white;
 }
 
-.Email{
-    margin-top: 16%;
-    margin-left: 10%;
-    
-}
-
-.Gmail{
-    width: 90%;
-    padding-right: 29%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-}
-
-.Password{
-    margin-top: 16%;
-    margin-left: 10%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-}
-
-.Unique{
-    width: 90%;
-    padding-right: 17%;
-}
-
-
 .flexBox{
     display: flex;
-    margin-top: 16%;
-    
-
+    margin-top:2%;
 }
 
 .flexBox > div{
@@ -64,25 +36,7 @@
 
 }
 
-.New{
-   color: green;
-    border: none;
-}
 
-.New:hover{
-    background-color: black;
-}
-.Enter{
-    border: none;
-}
-.Enter:hover{
-   background-color: black;
-}
-
-.Color{
-    
-    color:green;
-}
 
 /* input[type='text']{
     background-image: url("../Login/logos/mail.png");
@@ -110,9 +64,7 @@ input[type='password']{
         padding-top: 10%;
         margin-left: 30%;
     }
-    .Password{
-        margin-top: 10%;
-    }
+  
 
     .flexBox{
         margin-left: 15%;
@@ -128,19 +80,7 @@ input[type='password']{
     margin-left: 35%;
 }
 
- 
 
-    .Gmail{
-        height: 5h; 
-        padding-right: 47%;
-   
-} 
-
-    .Unique{
-        height: 5vh;
-        padding-right: 40%;
-        
-    }
   
  
  }
@@ -153,14 +93,6 @@ input[type='password']{
          padding-top: 7%;
      }
      
-     .Gmail{
-         padding-left: 10%;
-     }
-
-     .Unique{
-         padding-left: 10%;
-     }
-
 
      .flexBox >  div{
          margin:10%;
@@ -175,22 +107,10 @@ input[type='password']{
          padding-top: 2%;
      }
 
-     .Gmail{
-         padding-left: 10%;
-     }
+    }
 
-     .Unique{
-         padding-left: 10%;
-     }
- }
 
-.Unique{
-    height: 5vh;
-}
 
-.Gmail{
-    height: 5vh;
-}
 
 .Msg{
     padding-left: 30%;
@@ -202,3 +122,40 @@ input[type='password']{
     padding-top: 2%;
 }
 
+.Msgs{
+    padding-left: 37%;
+    padding-top: 2%;
+    color:red;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn-primary {
+    background-color:white !important;
+    color: green !important;
+   border: white !important;
+   
+}
+
+input[type='text'] {
+    margin-left: 10% ;
+    margin-top: 20%;
+}
+
+input[type='password'] {
+    margin-left: 10% ;
+    margin-top: 15%;
+}
+
+.form-group {
+    width: 400px;
+}
+
+
+input[type="text"]::placeholder{
+    text-align: left;
+}
+
+input[type="password"]::placeholder{
+    text-align: left;
+}
