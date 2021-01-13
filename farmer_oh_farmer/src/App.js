@@ -17,26 +17,10 @@ class App extends Component{
              
   render(){
 return(
-  <AddProduct></AddProduct>
-
-
-  
-    // <Router>
-    // <Switch>
-
-    //   <Route path="/" exact component={Login} />
-    //   <Route path="/view"  component={View} />
-    //   <Route path="/Order" component={Order} />
-    //   <Route path="/Login" component={Login} />
-    //   {/* <Route path="/Signup" component={SignUp} />  */}
-    
-    // </Switch>
-    // </Router>
-
-   
- 
+  // <AddProduct></AddProduct>
+  <Signup></Signup>
   );
-        }
+  }
 };
 
 export default App; 

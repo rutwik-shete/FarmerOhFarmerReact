@@ -10,7 +10,7 @@
 #header2{
     position: fixed;
     width: 230px;
-    height: 13%;
+    height: 19%;
     background-color: #6d8e0ae1;
 }
 #header3{
@@ -48,8 +48,8 @@
     right: 23px;
 }
 .logo{
-    position: relative;
-    left: 180vh;
+    position: absolute;
+    left: 181vh;
 }   
 .Box{
     position: relative;
@@ -61,6 +61,7 @@
     border-radius: 40px;
 }
 .chooseproduct{
+    color: white;
   font-size: larger;
   position: relative;  
   width: 400px;
@@ -70,11 +71,12 @@
   background-color: #6d8e0ae1;
   border: 2px double ;
   display: inline-block;
-  left: 32%;
+  left: 26%;
   top: 20%;
 
 }
 .unit{
+    color: white;
     font-size: larger;
     position: relative;  
     width: 200px;
@@ -84,16 +86,41 @@
     background-color: #6d8e0ae1;
     border: 2px double ;
     display: inline-block;
-    left: 6%;
-    top: 31%;
+    right: 10%;
+    top: 38%;
 }
-#minordertext{
-    position: relative;
-    font-family: "Times New Roman", Times, serif;
-    font-size: x-large;
-    left: 35%;
-    top: 200px;
+.minordertext{
+  margin-left: 28%;
+  margin-top: 22%;
+  color: white;
+
 }
-.text{
+.minorderbox{
     position: relative;
+    left: 52%;
+    bottom: 9%;
+}
+.ratepertext{
+    color: white;
+    margin-left: 32%;
+   
+}
+.rateperbox{
+    position: relative;
+    left: 48%;
+    bottom: 9%;
+}
+::placeholder{
+    text-align: center;
+    color: #6e8f0aab;
+
+}
+.logout{
+    position: absolute;
+    margin-left: 56%;
+    top: 20%;
+      
+}
+.viewadd{
+    margin-left: 72%;
 }
