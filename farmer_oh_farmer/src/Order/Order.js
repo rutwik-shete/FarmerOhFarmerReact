@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import './Order.css';
 import {Link}  from 'react-router-dom';
-import { Card, CardImg, CardText, CardBlock,
-  CardTitle, CardSubtitle, Button, CardBody } from 'reactstrap'
   import Orderloop from '../Order/Orderloop';
 class Order extends Component{
-    constructor(){
-        super();
-    }
+
      state = {
        Orders : [
          {
@@ -83,7 +79,7 @@ class Order extends Component{
       <span id="header-text-6">Farmer</span>
       <div id="navbox2">
       <Link to='/Login' className="Getout">Logout</Link>
-      <img src={require("../Homepage/Login/logos/logout.png")} className="logo" />
+      <img src={require("../Homepage/Login/logos/logout.png")} className="logo" alt="keyphoto" />
       </div>
       </div>
       <div className="block1">  

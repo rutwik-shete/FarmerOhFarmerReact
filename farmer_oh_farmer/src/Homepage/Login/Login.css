@@ -84,19 +84,19 @@
     color:green;
 }
 
-input[type='text']{
+/* input[type='text']{
     background-image: url("../Login/logos/mail.png");
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: 2%;
 }
 
-input[type='notext']{
+input[type='password']{
     background-image: url("../Login/logos/chavi.png");
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: 2%;
-}
+} */
 
 }
 
@@ -184,13 +184,21 @@ input[type='notext']{
      }
  }
 
- @media only screen and (min-width:1690px){
-     
-    .Gmail{
-        height: 5vh;
-    }
+.Unique{
+    height: 5vh;
+}
 
-    .flexBox{
-        width: 90%;
-    }
- }
+.Gmail{
+    height: 5vh;
+}
+
+.Msg{
+    padding-left: 30%;
+    padding-top: 2%;
+}
+
+.popup{
+    padding-left: 30%;
+    padding-top: 2%;
+}
+
