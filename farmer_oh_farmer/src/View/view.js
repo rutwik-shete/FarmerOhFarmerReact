@@ -2,48 +2,45 @@ import React, { Component } from 'react';
 import './view.css';
 import Loopimg from './loopimg';
 import './loopimg.css';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import Order from '../Order/Order';
+import {Link}  from 'react-router-dom';
 
 
 
 class View extends Component{
-  constructor(){
-    super(); 
-  }
+
 
   state={
      img:[
        {
-         rate:"250gm/",
+         rate:"210gm/",
          src:'./images/tomatoes.jpg' ,
-         price:"60Rs",
+         price:"61Rs",
        },
        {
-         rate:"250gm/",
+         rate:"220gm/",
          src:'./images/tomatoes.jpg',
-         price:"60Rs"
+         price:"62Rs"
        },
        {
-         rate:"250gm/",
+         rate:"230gm/",
          src:'./images/tomatoes.jpg',
-         price:"60Rs"
+         price:"63Rs"
 
        },
        {
         rate:"250gm/",
         src:'./images/tomatoes.jpg',
-        price:"60Rs"
+        price:"64Rs"
        },
        {
         rate:"250gm/",
         src:'./images/tomatoes.jpg',
-        price:"60Rs"
+        price:"65Rs"
        },
        {
         rate:"250gm/",
         src:'./images/tomatoes.jpg',
-        price:"60Rs"
+        price:"66Rs"
        },
         
      ],
@@ -80,7 +77,7 @@ class View extends Component{
        </div>
       
       <div className="Block"> 
-      <Loopimg imgData={this.state.img} />
+      <Loopimg imgData={this.state.img} key={this.state.img.price} />
       </div>
       </div> 
       </div> 
