@@ -23,12 +23,12 @@ class Signup extends Component {
             firstName: event.target.value
         })
     }
-    lasthandler = (event) => {
+    passwordhandler = (event) => {
         this.setState({
             password: event.target.value
         })
     }
-    passwordhandler = (event) => {
+    confirmpasswordhandler = (event) => {
         this.setState({
             confirmpassword: event.target.value
         })
@@ -84,10 +84,10 @@ class Signup extends Component {
                                     <input type="text" value={this.state.firstName} onChange={this.firsthandler} placeholder="Name/CompanyName/GroupName" size="50" /><br />
                                 </div>
                                 <div className="password">
-                                    <input type="password" value={this.state.lastName} onChange={this.lasthandler} placeholder="Password" size="37"/><br />
+                                    <input type="password" value={this.state.lastName} onChange={this.passwordhandler} placeholder="Password" size="37"/><br />
                                 </div>
                                 <div classname="confirmpassword">
-                                    <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Confirm Passsword"size="50" /><br />
+                                    <input type="confirmpassword" value={this.state.password} onChange={this.confirmpasswordhandler} placeholder="Confirm Passsword"size="50" /><br />
                                 </div>
                                 <div className="address">
                                     <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50"/><br />
