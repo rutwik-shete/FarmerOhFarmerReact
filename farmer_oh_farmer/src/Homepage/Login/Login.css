@@ -38,21 +38,7 @@
 
 
 
-/* input[type='text']{
-    background-image: url("../Login/logos/mail.png");
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 2%;
-} */
 
-input[type='password']{
-    background-image: url("../Login/logos/chavi.png");
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 2%;
-} */
-
-}
 
 
 
@@ -158,4 +144,5 @@ input[type="text"]::placeholder{
 
 input[type="password"]::placeholder{
     text-align: left;
+}
 }
