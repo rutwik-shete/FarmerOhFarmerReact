@@ -23,7 +23,7 @@
 }
 .flexbox{
     position: relative;
-    bottom: 5px;
+    top: 5px;
     display: flex;
     justify-content: center;
     margin: 13px;

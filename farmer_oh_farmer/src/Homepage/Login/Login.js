@@ -9,7 +9,9 @@ const initialState = {
   password:'',
   redirect:false,
   emailError:'',
-  passwordError:''
+  passwordError:'',
+  isbuttonDisabled:false,
+  Displaymessage:''
 }
 
 
@@ -20,8 +22,6 @@ class Login extends Component{
     super(props);
 
       this.state = initialState;
-     
-
        this.login = this.login.bind(this);
        this.onchange = this.onchange.bind(this);
 
@@ -38,35 +38,42 @@ class Login extends Component{
     if(!this.state.email){
       emailError = 'Email cannot be empty';
     }
-    if (emailError || passwordError) {
-      this.setState({emailError , passwordError});
+    if (emailError || passwordError ) {
+      this.setState({emailError , passwordError });
       return false;
-    }
-
+    } 
     return true;
-
   };
+
+ 
+ 
 
  login() {
   //  console.log(this.state);
-  const isValid = this.Validate();
- 
 
+  const isValid = this.Validate();
+
+  if(isValid){
+
+    this.setState(initialState);
+    this.setState({isbuttonDisabled:true});
   PostData(this.state).then((result) => {
     let responseJson = result;
-    if(responseJson['status']==="Success"){
-      // this.props.history.push('/View')
+    if(responseJson['status']==="Success" ){
+      
       sessionStorage.setItem('userData', responseJson);
       this.setState({redirect: true});
-     
     }
-  })
- 
-  if(isValid) {
- 
-    this.setState(initialState);
-  }
+  
 
+    else{
+      console.log('Login Failed');
+      this.setState({isbuttonDisabled:false});
+      this.setState({Displaymessage:"Login Failed"});
+    }
+
+  })
+}
  
  }
 
@@ -74,9 +81,6 @@ class Login extends Component{
       this.setState({[e.target.name]: e.target.value});
       console.log(this.state);
  }
-
-
-
   render() {
 
     if(this.state.redirect){
@@ -84,49 +88,41 @@ class Login extends Component{
      }
   
     return(   
-    
-     
-
       <div className="bgimage">   
       <div className="Main"> 
       <div className="Heading"> 
             <h1>LOGIN</h1>
-             </div> 
- 
-<div className="Email">
-<input type="text"  className="Gmail" name="email" placeholder="E-mail" onChange={this.onchange} >
+      </div> 
+ <form>
+<div className="form-group">
+<input type="text"  className="form-control" name="email" placeholder="E-mail" onChange={this.onchange}  >
 </input>
-
-{/* <img src={require("./logos/mail.png")} alt="mailbox" className="Maillogo"></img> */}
-
 </div>
 
 <div className="popup" style={{  fontSize:20, color:"red" }}>{this.state.emailError} </div>
-
-<div className="Password">
- <input type="password" className="Unique" name="password" placeholder="Password" onChange={this.onchange}></input>
- 
- {/* <img src={require("./logos/chavi.png")} alt="key" className="Passlogo"></img> */}
-
+<div className="form-group">
+ <input type="password" placeholder="Password" className="form-control" name="password"  onChange={this.onchange}  ></input>
  </div>
+
  <div className="Msg" style={{ fontSize:20, color:"red"}}>{this.state.passwordError}</div>
+ </form>
+ <div className="Msgs">{this.state.Displaymessage}</div>
 
 <div className="flexBox">
-
 <div className="Submit">
-  <button type="submit" className="Enter" onClick={this.login} >
-submit 
+  <button type="button" className="btn btn-primary" onClick={this.login} disabled={this.state.isbuttonDisabled} >
+  {this.state.isbuttonDisabled ? 'Sending...' : 'Submit'}
  </button>
 </div>
 
 <div className="Signup">
- <button type="submit" className="New" >
+ <button type="button" className="btn btn-primary" >
    Create account</button> 
-
 </div>
-</div>    
-</div>     
-   </div>
+</div>  
+</div>  
+   
+</div>
       
 );
   }
