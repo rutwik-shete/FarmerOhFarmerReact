@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {PostData} from '../../Notsure/PostData';
+import {PostData} from '../Notsure/PostData';
 import { Redirect} from 'react-router-dom';
 import './Login.css';
 // import {Link}  from 'react-router-dom';

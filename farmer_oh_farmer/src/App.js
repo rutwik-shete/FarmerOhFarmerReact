@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import View from "./View/view";
 import Order from "./Order/Order";
-import Login from "./Homepage/Login/Login";
+import Login from "./Login/Login";
 import MenuBar from "./MenuBar/MenuBar";
-// import Signup from "./SignUpPage/Signup";
+import Signup from "./SignUpPage/Signup";
 
 class App extends Component {
   render() {
