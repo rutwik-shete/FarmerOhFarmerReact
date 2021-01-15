@@ -1,130 +1,147 @@
-import React, { Component } from 'react';
-import './Order.css';
-import {Link}  from 'react-router-dom';
-  import Orderloop from '../Order/Orderloop';
-class Order extends Component{
-
-     state = {
-       Orders : [
-         {
-           name:"Atharva Tuljapurkar",
-           address:"A-504,Sai Niwas,Dhayari",
-           phone:"8999052763",
-           product:"Tomato",
-           qty:"2KG",
-           cost:"240",
-           product2:"Onion",
-           qty2:"2KG",
-           cost2:"300",
-           product3:"Carrot",
-           qty3:"2KG",
-           cost3:"150",
-           product4:"Garlic",
-           qty4:"2KG",
-           cost4:"50",
-           status:"PENDING"
-               
-         },
-         {
-          name:"Atharva Tuljapurkar",
-          address:"A-504,Sai Niwas,Dhayari",
-          phone:"8999052763",
-          product:"Tomato",
-          qty:"2KG",
-          cost:"240",
-          product2:"Onion",
-          qty2:"2KG",
-          cost2:"300",
-          product3:"Carrot",
-          qty3:"2KG",
-          cost3:"150",
-          product4:"Garlic",
-          qty4:"2KG",
-          cost4:"50",
-          status:"DELIVERED"
-          
-         }
-
-       ],
-    //    Customer : [
-    //     {
-    //         product:"Tomato",
-    //         qty:"2KG",
-    //         cost:"240"
-    //     },
-    //     {
-    //         product:"Onion",
-    //         qty:"2KG",
-    //         cost:"300"
-    //     },
-    //     {
-    //         product:"Carrot",
-    //         qty:"2KG",
-    //         cost:"150"
-    //     },
-    //     {
-    //         product:"Garlic",
-    //         qty:"2KG",
-    //         cost:"50"
-    //     }
-    // ],
-     }
-     render(){
-     return(
-    
-        <div className="Toporder">
+import React, { Component } from "react";
+import "./Order.css";
+import { Link } from "react-router-dom";
+import Orderloop from "../Order/Orderloop";
+import Grid from "@material-ui/core/Grid";
+class Order extends Component {
+  state = {
+    Orders: [
+      {
+        name: "Atharva Tuljapurkar",
+        address: "A-504,Sai Niwas,Dhayari",
+        phone: "8999052763",
+        product: "Tomato",
+        measurement: "250g",
+        qty: "2",
+        cost: "240",
+        product2: "Onion",
+        measurement2: "150g",
+        qty2: "1",
+        cost2: "300",
+        product3: "Carrot",
+        measurement3: "350g",
+        qty3: "3",
+        cost3: "150",
+        product4: "Garlic",
+        measurement4: "500g",
+        qty4: "5",
+        cost4: "50",
+        status: "PENDING",
+      },
+      {
+        name: "Atharva Tuljapurkar",
+        address: "A-504,Sai Niwas,Dhayari",
+        phone: "8999052763",
+        product: "Tomato",
+        measurement: "250g",
+        qty: "2",
+        cost: "240",
+        product2: "Onion",
+        measurement2: "150g",
+        qty2: "1",
+        cost2: "300",
+        product3: "Carrot",
+        measurement3: "350g",
+        qty3: "3",
+        cost3: "150",
+        product4: "Garlic",
+        measurement4: "500g",
+        qty4: "5",
+        cost4: "50",
+        status: "PENDING",
+      },
+      {
+        name: "Atharva Tuljapurkar",
+        address: "A-504,Sai Niwas,Dhayari",
+        phone: "8999052763",
+        product: "Tomato",
+        measurement: "250g",
+        qty: "2",
+        cost: "240",
+        product2: "Onion",
+        measurement2: "150g",
+        qty2: "1",
+        cost2: "300",
+        product3: "Carrot",
+        measurement3: "350g",
+        qty3: "3",
+        cost3: "150",
+        product4: "Garlic",
+        measurement4: "500g",
+        qty4: "5",
+        cost4: "50",
+        status: "PENDING",
+      },
+      {
+        name: "Atharva Tuljapurkar",
+        address: "A-504,Sai Niwas,Dhayari",
+        phone: "8999052763",
+        product: "Tomato",
+        measurement: "250g",
+        qty: "2",
+        cost: "240",
+        product2: "Onion",
+        measurement2: "150g",
+        qty2: "1",
+        cost2: "300",
+        product3: "Carrot",
+        measurement3: "350g",
+        qty3: "3",
+        cost3: "150",
+        product4: "Garlic",
+        measurement4: "500g",
+        qty4: "5",
+        cost4: "50",
+        status: "PENDING",
+      },
+      {
+        name: "Atharva Tuljapurkar",
+        address: "A-504,Sai Niwas,Dhayari",
+        phone: "8999052763",
+        product: "Tomato",
+        measurement: "250g",
+        qty: "2",
+        cost: "240",
+        product2: "Onion",
+        measurement2: "150g",
+        qty2: "1",
+        cost2: "300",
+        product3: "Carrot",
+        measurement3: "350g",
+        qty3: "3",
+        cost3: "150",
+        product4: "Garlic",
+        measurement4: "500g",
+        qty4: "5",
+        cost4: "50",
+        status: "PENDING",
+      },
+    ],
+  };
+  render() {
+    return (
+      <div className="Toporder">
         <div id="header2">
-      <span id="header-text-4">Farmer</span>
-      <span id="header-text-5">Oh</span>
-      <span id="header-text-6">Farmer</span>
-      <div id="navbox2">
-      <Link to='/Login' className="Getout">Logout</Link>
-      <img src={require("../Homepage/Login/logos/logout.png")} className="logo" alt="keyphoto" />
-      </div>
-      </div>
-      <div className="block1">  
-
-      <Orderloop ord={this.state.Orders}
-                 cst={this.state.Customer} />
-    
-    
-      
+          <span id="header-text-4">Farmer</span>
+          <span id="header-text-5">Oh</span>
+          <span id="header-text-6">Farmer</span>
+          <div id="navbox2">
+            <Link to="/Login" className="Getout">
+              Logout
+            </Link>
+            <img
+              src={require("../Homepage/Login/logos/logout.png")}
+              className="logo"
+              alt="keyphoto"
+            />
+          </div>
         </div>
-        </div>
-      
-       
-        
-
-     );
-
-
-
-
-
-
-
-
-
-
-     }
-
-
-
-
-};
+        <Grid item xs={12}>
+          <Orderloop ord={this.state.Orders} cst={this.state.Customer} />
+        </Grid>
+      </div>
+    );
+  }
+}
 
 export default Order;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

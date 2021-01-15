@@ -1,47 +1,55 @@
-.Outer{
-    display: grid;
-    grid-template-columns: auto auto;
-   
-}
-
-
 .Extend{
     position: relative;
     left: 24%;
     top: 5%;
-    width: 50%;
-    height: 70vh;
+    width:max-content;
+    height: max-content;
     background-color: white;
     border-radius: 10px;
+    margin-top: 5%;
+
 }
 
-th, td {
-    padding: 20px;
-    text-align: left;
-}
-
-#Table{
-    position: absolute;
-    top: 23%;
-    left: 15%;
+.customerInfo{
+    align-self: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
 .Upper{
-    padding-left: 30px;
     padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    background-color: #779c07;
+    border-radius: 10px 10px 0px 0px;
+}
+
+table{
+    display:block;
+    height : 200px;
+    overflow-y : scroll;
+}
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+.Total{
+    font-weight: bold;
 }
 
 .Status{
-    position:absolute;
-    top: 95.5%;
-    width: 43.3vh;
+    margin-top: 10px;
+    width:100%;
     border-radius: 0px 0px 10px 10px;
-    border-style: solid;
+    border-style: none;
     background-color: red;
     color: white ;
+    font-weight: bold;
+    padding: 3%;
 }
-
-
 
 
 
