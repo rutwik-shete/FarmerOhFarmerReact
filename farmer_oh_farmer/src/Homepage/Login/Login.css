@@ -123,7 +123,7 @@
    
 }
 
-input[type='text'] {
+input[type='text1'] {
     margin-left: 10% ;
     margin-top: 20%;
 }
@@ -138,7 +138,7 @@ input[type='password'] {
 }
 
 
-input[type="text"]::placeholder{
+input[type="text1"]::placeholder{
     text-align: left;
 }
 

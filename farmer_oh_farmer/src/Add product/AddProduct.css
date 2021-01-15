@@ -53,63 +53,15 @@
 }   
 .Box{
     position: relative;
-    top: 20%;
+    top: 18%;
     left: 20%;
     width: 60%;
-    height: 60%;
+    height: 80%;
     background-color: #6d8e0ae1;
     border-radius: 40px;
 }
-.chooseproduct{
-    color: white;
-  font-size: larger;
-  position: relative;  
-  width: 400px;
-  height: 35px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  background-color: #6d8e0ae1;
-  border: 2px double ;
-  display: inline-block;
-  left: 26%;
-  top: 20%;
 
-}
-.unit{
-    color: white;
-    font-size: larger;
-    position: relative;  
-    width: 200px;
-    height: 35px;
-    overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
-    background-color: #6d8e0ae1;
-    border: 2px double ;
-    display: inline-block;
-    right: 10%;
-    top: 38%;
-}
-.minordertext{
-  margin-left: 28%;
-  margin-top: 22%;
-  color: white;
 
-}
-.minorderbox{
-    position: relative;
-    left: 52%;
-    bottom: 9%;
-}
-.ratepertext{
-    color: white;
-    margin-left: 32%;
-   
-}
-.rateperbox{
-    position: relative;
-    left: 48%;
-    bottom: 9%;
-}
 ::placeholder{
     text-align: center;
     color: #6e8f0aab;
@@ -121,6 +73,45 @@
     top: 20%;
       
 }
-.viewadd{
-    margin-left: 72%;
+
+
+.form-row{
+    margin-left: 40% !important;
+    padding-top: 5%;
+    
+}
+
+/* .form-group{
+    width: 400px;
+   margin-top: 10%;
+   margin-left: 30%;
+
+} */
+
+select>option{
+  height: 10;
+}
+
+.Sample{
+    width: 400px;
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+
+#signout{
+    font-size: 20px;
+    padding-left: 5%;
+    color: white;
+}
+
+#nextpage{
+    font-size: 20px;
+    padding-left: 59%;
+    color: white;
+}
+
+.Lol{
+    display:flex;
+    margin-left: 25%;
 }

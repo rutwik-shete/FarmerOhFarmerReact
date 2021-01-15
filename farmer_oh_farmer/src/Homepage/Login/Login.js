@@ -57,7 +57,7 @@ class Login extends Component{
 
     this.setState(initialState);
     this.setState({isbuttonDisabled:true});
-  PostData(this.state).then((result) => {
+     PostData(this.state).then((result) => {
     let responseJson = result;
     if(responseJson['status']==="Success" ){
       
@@ -95,7 +95,7 @@ class Login extends Component{
       </div> 
  <form>
 <div className="form-group">
-<input type="text"  className="form-control" name="email" placeholder="E-mail" onChange={this.onchange}  >
+<input type="text1"  className="form-control" name="email" placeholder="E-mail" onChange={this.onchange}  >
 </input>
 </div>
 
