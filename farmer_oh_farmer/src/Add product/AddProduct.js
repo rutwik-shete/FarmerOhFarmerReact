@@ -20,9 +20,9 @@ class AddProduct extends Component {
                    
                 </div>
                 
-                <div>
+                {/* <div>
                     <img src={require("../Homepage/Login/logos/logout.png")} className="logo" alt="Display" />
-                </div>
+                </div> */}
                 <div className="Box">
                     <select className="chooseproduct">
                         <option selected hidden>Choose Product</option>

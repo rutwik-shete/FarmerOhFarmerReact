@@ -10,13 +10,13 @@ import Order from "./Order/Order";
 import Login from "./Login/Login";
 import MenuBar from "./MenuBar/MenuBar";
 import Signup from "./SignUpPage/Signup";
+import AddProduct from "./Add product/AddProduct";
 
 class App extends Component {
   render() {
     return (
       <div>
         <Router>
-          <MenuBar/>
           <Switch>
             <Route path="/" exact component={Login} />
             <Route path="/view" component={View} />

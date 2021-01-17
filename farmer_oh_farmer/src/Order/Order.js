@@ -130,7 +130,7 @@ class Order extends Component {
               Logout
             </Link>
             <img
-              src={require("../Homepage/Login/logos/logout.png")}
+              // src={require("../Homepage/Login/logos/logout.png")}
               className="logo"
               alt="keyphoto"
             />
