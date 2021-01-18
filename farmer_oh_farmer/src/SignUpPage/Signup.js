@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Signup.css';
+import signupAPI, { signupfarmer } from '../Notsure/signupAPI';
 
 class Signup extends Component {
+
+  
     constructor(props) {
         super(props)
 
@@ -10,12 +13,13 @@ class Signup extends Component {
             password: "",
             confirmPassword: "",
             address: "",
+            email:"",
             phonenumber: "",
             pincode: "",
 
 
         }
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.submit = this.submit.bind(this);
     }
 
     namehandler = (event) => {
@@ -40,7 +44,7 @@ class Signup extends Component {
     }
     emailhandler = (event) => {
         this.setState({
-            address: event.target.value
+            email: event.target.value
         })
     }
     phonenumberhandler = (event) => {
@@ -55,12 +59,12 @@ class Signup extends Component {
     }
 
     handleSubmit = (event) => {
-        alert(`${this.state.firstName} ${this.state.lastName}  Farmer Registered Successfully!`)
+        alert(`${this.state.name}   Farmer Registered Successfully!`)
         console.log(this.state);
         this.setState({
-            firstName: "",
+            name: "",
             password: "",
-            confirmpassword: "",
+            confirmPassword: "",
             address: "",
             email:"",
             phonenumber: "",
@@ -69,24 +73,39 @@ class Signup extends Component {
         event.preventDefault()
 
     }
+    submit(){
+        console.log('fe');
+        signupfarmer(this.state).then((result) => {
+            let responseJson = result;
+            if(responseJson['status']==="Success"){
 
+            sessionStorage.setItem('userData', responseJson);
+            console.log(responseJson);
+            }
+            else{
+                console.log('Failed');
+                console.log(result);
+            }
+      })
 
+    }
 
 
     render() {
         return (
+            <div className="blurredbg">
             <div className="Home">
-                        <form onSubmit={this.handleSubmit}>
+                        <form>
                             <div className="startselling">
                                 <h1>Register And Start Selling</h1>
                             </div>
-                                <div classname="firstname"> 
-                                    <input type="text" value={this.state.name} onChange={this.firsthandler} placeholder="Name/CompanyName/GroupName" size="50" required/><br />
+                                <div className="name"> 
+                                    <input type="text" value={this.state.name} onChange={this.namehandler} placeholder="Name/CompanyName/GroupName" size="50" required/><br />
                                 </div>
                                 <div className="password">
                                     <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Password" id="password" size="50" required/><br />
                                 </div>
-                                <div classname="confirmpassword">
+                                <div className="confirmpassword">
                                     <input type="password" value={this.state.confirmPassword} onChange={this.confirmpasswordhandler} placeholder="Confirm Passsword" id="confirm_password" size="50" required /><br />
                                 </div>
                                 <div className="address">
@@ -97,19 +116,20 @@ class Signup extends Component {
                                 </div>
                                 <div className="flexbox">
                                     <div className="phonenumber">
-                                        <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber" required/><br />
+                                        <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber" maxlength="10" required/><br />
                                     </div>
                                     <div className="pincode">
                                         <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder=" PinCode" maxlength="6" size="20" required/><br />
                                     </div>
                                 </div>
                                 <div className="submit">
-                                    <input type="submit" value="Sign Up"/> 
+                                    <input type="button" onClick={this.submit}  value="Sign Up"/> 
                                 </div>
                         </form>
             </div>
-        )
+            </div>
+        );
     }
 }
 
-export default Signup
+export default Signup;

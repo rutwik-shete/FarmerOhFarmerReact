@@ -131,6 +131,10 @@ class Order extends Component {
             </Link>
             {/* <img
               src={require("../Homepage/Login/logos/logout.png")}
+=======
+            <img
+              // src={require("../Homepage/Login/logos/logout.png")}
+// >>>>>>> 5f7af64c48003adf37c8460d13e8b1eed324af0d
               className="logo"
               alt="keyphoto"
             /> */}

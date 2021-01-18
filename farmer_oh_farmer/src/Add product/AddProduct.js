@@ -78,12 +78,14 @@ class AddProduct extends Component {
                     <span id="header-text-4">Farmer</span>
                     <span id="header-text-5">Oh</span>
                     <span id="header-text-6">Farmer</span>
+
                     <div id="header3">
                         <span id="nextpage">View products</span>
                         <span id="signout">Logout</span>
 
                     </div>
                 </div>
+
                 <div className="Box">
                     <form>
                         <div className="form-row align-items-center">
@@ -133,6 +135,7 @@ class AddProduct extends Component {
                     </div>
                 </div>
             </div>
+
 
 
         );

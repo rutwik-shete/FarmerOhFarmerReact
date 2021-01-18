@@ -6,6 +6,8 @@ import Login from "./Login/Login";
 // import MenuBar from "./MenuBar/MenuBar";
 import Signup from "./SignUpPage/Signup";
 import AddProduct from "./Add product/AddProduct";
+
+
 class App extends Component {
   render() {
     return (
