@@ -59,7 +59,8 @@ class Login extends Component{
     this.setState({isbuttonDisabled:true});
      PostData(this.state).then((result) => {
     let responseJson = result;
-    if(responseJson['status']==="Success" ){
+
+        if(responseJson['status']==="Success" ){
       
       sessionStorage.setItem('userData', responseJson);
       this.setState({redirect: true});

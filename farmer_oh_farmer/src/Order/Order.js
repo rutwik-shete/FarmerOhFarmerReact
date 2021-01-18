@@ -129,11 +129,11 @@ class Order extends Component {
             <Link to="/Login" className="Getout">
               Logout
             </Link>
-            <img
+            {/* <img
               src={require("../Homepage/Login/logos/logout.png")}
               className="logo"
               alt="keyphoto"
-            />
+            /> */}
           </div>
         </div>
         <Grid item xs={12}>
