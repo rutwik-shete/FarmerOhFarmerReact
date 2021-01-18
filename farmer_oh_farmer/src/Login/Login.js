@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {PostData} from '../Notsure/PostData';
 import { Redirect} from 'react-router-dom';
 import './Login.css';
+import Signup from '../SignUpPage/Signup';
 // import {Link}  from 'react-router-dom';
 
 const initialState = {
@@ -57,9 +58,10 @@ class Login extends Component{
 
     this.setState(initialState);
     this.setState({isbuttonDisabled:true});
-  PostData(this.state).then((result) => {
+     PostData(this.state).then((result) => {
     let responseJson = result;
-    if(responseJson['status']==="Success" ){
+
+        if(responseJson['status']==="Success" ){
       
       sessionStorage.setItem('userData', responseJson);
       this.setState({redirect: true});
@@ -88,14 +90,15 @@ class Login extends Component{
      }
   
     return(   
-      <div className="bgimage">   
-      <div className="Main"> 
+      <div className="bgimage">
+              {/* <Signup></Signup>  */}
+      <div className="Main">
       <div className="Heading"> 
             <h1>LOGIN</h1>
       </div> 
  <form>
 <div className="form-group">
-<input type="text"  className="form-control" name="email" placeholder="E-mail" onChange={this.onchange}  >
+<input type="text1"  className="form-control" name="email" placeholder="E-mail" onChange={this.onchange}  >
 </input>
 </div>
 

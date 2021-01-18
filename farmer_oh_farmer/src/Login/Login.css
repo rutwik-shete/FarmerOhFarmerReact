@@ -123,22 +123,13 @@
    
 }
 
-input[type='text'] {
-    margin-left: 10% ;
-    margin-top: 20%;
-}
-
-input[type='password'] {
-    margin-left: 10% ;
-    margin-top: 15%;
-}
 
 .form-group {
     width: 400px;
 }
 
 
-input[type="text"]::placeholder{
+input[type="text1"]::placeholder{
     text-align: left;
 }
 
