@@ -1,146 +1,75 @@
 import React, { Component } from "react";
 import "./Order.css";
-import { Link } from "react-router-dom";
-import Orderloop from "../Order/Orderloop";
-import Grid from "@material-ui/core/Grid";
+import Orderloop from "./OrderCard";
+import Container from "react-bootstrap/Container";
+import ReactLoading from "react-loading";
 class Order extends Component {
+  componentDidMount() {
+    let url =
+      "http://farmer-oh-farmer.herokuapp.com/api/farmer/getOrders";
+    fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ farmerId: "2" }),
+    }).then((result) => {
+      result.json().then((response) => {
+        if (response["status"] === "Success") {
+          this.setState({
+            Orders: response["result"],
+            isOrderFetched: "Success",
+          });
+        } else {
+          this.setState({
+            Orders: response["result"],
+            isOrderFetched: "Failed",
+          });
+        }
+        console.log({ response });
+      });
+    });
+  }
+
   state = {
-    Orders: [
-      {
-        name: "Atharva Tuljapurkar",
-        address: "A-504,Sai Niwas,Dhayari",
-        phone: "8999052763",
-        product: "Tomato",
-        measurement: "250g",
-        qty: "2",
-        cost: "240",
-        product2: "Onion",
-        measurement2: "150g",
-        qty2: "1",
-        cost2: "300",
-        product3: "Carrot",
-        measurement3: "350g",
-        qty3: "3",
-        cost3: "150",
-        product4: "Garlic",
-        measurement4: "500g",
-        qty4: "5",
-        cost4: "50",
-        status: "PENDING",
-      },
-      {
-        name: "Atharva Tuljapurkar",
-        address: "A-504,Sai Niwas,Dhayari",
-        phone: "8999052763",
-        product: "Tomato",
-        measurement: "250g",
-        qty: "2",
-        cost: "240",
-        product2: "Onion",
-        measurement2: "150g",
-        qty2: "1",
-        cost2: "300",
-        product3: "Carrot",
-        measurement3: "350g",
-        qty3: "3",
-        cost3: "150",
-        product4: "Garlic",
-        measurement4: "500g",
-        qty4: "5",
-        cost4: "50",
-        status: "PENDING",
-      },
-      {
-        name: "Atharva Tuljapurkar",
-        address: "A-504,Sai Niwas,Dhayari",
-        phone: "8999052763",
-        product: "Tomato",
-        measurement: "250g",
-        qty: "2",
-        cost: "240",
-        product2: "Onion",
-        measurement2: "150g",
-        qty2: "1",
-        cost2: "300",
-        product3: "Carrot",
-        measurement3: "350g",
-        qty3: "3",
-        cost3: "150",
-        product4: "Garlic",
-        measurement4: "500g",
-        qty4: "5",
-        cost4: "50",
-        status: "PENDING",
-      },
-      {
-        name: "Atharva Tuljapurkar",
-        address: "A-504,Sai Niwas,Dhayari",
-        phone: "8999052763",
-        product: "Tomato",
-        measurement: "250g",
-        qty: "2",
-        cost: "240",
-        product2: "Onion",
-        measurement2: "150g",
-        qty2: "1",
-        cost2: "300",
-        product3: "Carrot",
-        measurement3: "350g",
-        qty3: "3",
-        cost3: "150",
-        product4: "Garlic",
-        measurement4: "500g",
-        qty4: "5",
-        cost4: "50",
-        status: "PENDING",
-      },
-      {
-        name: "Atharva Tuljapurkar",
-        address: "A-504,Sai Niwas,Dhayari",
-        phone: "8999052763",
-        product: "Tomato",
-        measurement: "250g",
-        qty: "2",
-        cost: "240",
-        product2: "Onion",
-        measurement2: "150g",
-        qty2: "1",
-        cost2: "300",
-        product3: "Carrot",
-        measurement3: "350g",
-        qty3: "3",
-        cost3: "150",
-        product4: "Garlic",
-        measurement4: "500g",
-        qty4: "5",
-        cost4: "50",
-        status: "PENDING",
-      },
-    ],
+    Orders: [],
+    isOrderFetched: "Loading",
   };
   render() {
-    return (
-      <div className="Toporder">
-        <div id="header2">
-          <span id="header-text-4">Farmer</span>
-          <span id="header-text-5">Oh</span>
-          <span id="header-text-6">Farmer</span>
-          <div id="navbox2">
-            <Link to="/Login" className="Getout">
-              Logout
-            </Link>
-            <img
-              src={require("../Homepage/Login/logos/logout.png")}
-              className="logo"
-              alt="keyphoto"
-            />
+    if (this.state.isOrderFetched === "Success") {
+      return (
+        <>
+          <div className="Block">
+            <Container fluid="true">
+              <Orderloop ord={this.state.Orders} />
+            </Container>
           </div>
-        </div>
-        <Grid item xs={12}>
-          <Orderloop ord={this.state.Orders} cst={this.state.Customer} />
-        </Grid>
-      </div>
-    );
+        </>
+      );
+    } else if (this.state.isOrderFetched === "Loading") {
+      return (
+        <>
+          <div className="Block">
+            <div className="loadingStyle">
+              <ReactLoading type="bars" color="#6C8E0AAB" />
+            </div>
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div className="Block">
+            <div className="NoOrdersDiv">
+              <h1 className="NoOrdersError">
+                No Orders Available For The Farmer
+              </h1>
+            </div>
+          </div>
+        </>
+      );
+    }
   }
 }
 

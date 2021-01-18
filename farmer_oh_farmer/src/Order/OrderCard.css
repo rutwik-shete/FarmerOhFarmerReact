@@ -1,13 +1,13 @@
 .Extend{
     position: relative;
-    left: 24%;
-    top: 5%;
     width:max-content;
     height: max-content;
     background-color: white;
     border-radius: 10px;
-    margin-top: 5%;
+}
 
+.OrderRowStyle{
+    padding: 3% 3% 0% 3%;
 }
 
 .customerInfo{

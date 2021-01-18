@@ -84,7 +84,7 @@ class Login extends Component{
   render() {
 
     if(this.state.redirect){
-      return(<Redirect to={'/View'} />);
+      return(<Redirect to={'/homepage'} />);
      }
   
     return(   

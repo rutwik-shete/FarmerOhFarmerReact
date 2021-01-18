@@ -270,8 +270,73 @@
         
     }
 }
+.Block {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: transparent;
+    overflow-y: scroll;
+}
+.loadingStyle{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 20%;
+    height: 40%;
+    margin: auto;
+    background-color: transparent;
+    overflow-y: scroll;
+}
+element.style {
+    fill: rgba(108, 142, 10, 0.67);
+    height: max-content;
+    width: max-content;
+}
+svg {
+    position: relative;
+    height:150%;
+}
 
-.block1{
-    width:85%;
+@media only screen and (min-width: 420px ) and ( min-height: 910px ){
+    .loadingStyle{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 20%;
+        height: 40%;
+        margin: auto;
+        background-color: transparent;
+        overflow-y: scroll;
+    }
+    svg {
+        position: relative;
+        height:300%;
+    }
+}
 
+.NoOrdersDiv{
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    height:100%;
+    align-content: center;
+    margin-top: 20%;
+}
+
+.NoOrdersError{
+    text-align: center;
+    font-weight: bold;
+    color: white;
 }
