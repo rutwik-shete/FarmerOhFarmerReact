@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "./Order.css";
-import Orderloop from "./OrderCard";
+import "./ViewProducts.css";
+import ProductCart from "./ProductCart";
 import Container from "react-bootstrap/Container";
-import ReactLoading from "react-loading";
 import * as Constants from "../Constants";
-class Order extends Component {
+import ReactLoading from "react-loading";
+
+class ViewProducts extends Component {
   componentDidMount() {
-    let url =
-      Constants.GET_ORDERS_API;
+    let url = Constants.GET_PRODUCTS_API;
     fetch(url, {
       method: "POST",
       headers: {
@@ -19,13 +19,13 @@ class Order extends Component {
       result.json().then((response) => {
         if (response["status"] === "Success") {
           this.setState({
-            Orders: response["result"],
-            isOrderFetched: "Success",
+            Products: response["result"],
+            isProductFetched: "Success",
           });
         } else {
           this.setState({
-            Orders: response["result"],
-            isOrderFetched: "Failed",
+            Products: response["result"],
+            isProductFetched: "Failed",
           });
         }
         console.log({ response });
@@ -34,21 +34,22 @@ class Order extends Component {
   }
 
   state = {
-    Orders: [],
-    isOrderFetched: "Loading",
+    Products: [],
+    isProductFetched:"Loading",
   };
+
   render() {
-    if (this.state.isOrderFetched === "Success") {
+    if (this.state.isProductFetched === "Success") {
       return (
         <>
-          <div className="Block">
-            <Container fluid="true">
-              <Orderloop ord={this.state.Orders} />
-            </Container>
-          </div>
+          <div className="ProductBlock">
+        <Container fluid="true">
+          <ProductCart Products={this.state.Products} />
+        </Container>
+      </div>
         </>
       );
-    } else if (this.state.isOrderFetched === "Loading") {
+    } else if (this.state.isProductFetched === "Loading") {
       return (
         <>
           <div className="Block">
@@ -64,7 +65,7 @@ class Order extends Component {
           <div className="Block">
             <div className="NoOrdersDiv">
               <h1 className="NoOrdersError">
-                No Orders Available For The Farmer
+                No Products Added Please Add Products
               </h1>
             </div>
           </div>
@@ -74,4 +75,4 @@ class Order extends Component {
   }
 }
 
-export default Order;
+export default ViewProducts;

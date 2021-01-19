@@ -30,14 +30,14 @@ class MenuBar extends Component {
                 <NavLink
                   activeClassName="NavLinkActive"
                   className="NavLinkInActive"
-                  to="/homepage/view"
+                  to="/homepage/viewproducts"
                 >
                   View Products
                 </NavLink>
                 <NavLink
                   activeClassName="NavLinkActive"
                   className="NavLinkInActive"
-                  to="/homepage/order"
+                  to="/homepage/vieworders"
                 >
                   View Orders
                 </NavLink>

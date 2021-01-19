@@ -1,0 +1,12 @@
+.ProductBlock {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    overflow-y: scroll;
+}

@@ -11,7 +11,7 @@ class Orderloop extends Component {
       <Row className="justify-content-md-center">
         {this.props.ord.map((ord) => (
           <Col className="OrderRowStyle" md="auto" key={ord.id}>
-            <div className="Extend">
+            <div className="OrderCard">
               <div className="Upper">
                   <p className="customerInfo"> {ord.customerName} </p>
                   <p className="customerInfo"> {ord.customerAddress}</p>
