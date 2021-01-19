@@ -1,204 +1,76 @@
+.NavBarStyle{
+    background-color:#6d8e0ad2 ;
+    height: 60px;
+    width: 100%;
+    display: inline-block;
+    z-index: 9999;
+}
 
-@media only screen and (min-width: 320px) {
-.bgimage{
-   background-image: url("../../assets/BgImage.png");
-    background-size: cover;
+@media only screen and (max-width: 991px ){
+    .NavBarCollapseStyle{
+        background-color: #6d8e0ad2;
+    }
+    
+}
+
+.BgImage{
+    background-image: url("../assets/BImg.png");
+    display: flex;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
-
-.Main{
+#WebsiteLogoDiv{
+    padding: 10px;
+    display: inline-block;
     position: relative;
-    top: 10%;
-    left: 8%;
-  width: 85%;
-  height: 70%;
-  background-color: #6C8E0AAB;
-    
-
+    background-color: #6d8e0ad2 ;
+    height: max-content;
+    width: max-content;
 }
 
-.Heading{
- text-align: center;
- color: white;
+#WebsiteLogo{
+    content: url("../assets/WebsiteLogoSmall.png");
+    height:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
-.Email{
-    margin-top: 16%;
-    margin-left: 10%;
-    
-}
-
-.Gmail{
-    width: 90%;
-    padding-right: 29%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-}
-
-.Password{
-    margin-top: 16%;
-    margin-left: 10%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-}
-
-.Unique{
-    width: 90%;
-    padding-right: 17%;
-}
-
-
-.flexBox{
-    display: flex;
-    margin-top: 16%;
-    
-
-}
-
-.flexBox > div{
-  margin: 8%;
-
-}
-
-.New{
-   color: green;
-    border: none;
-}
-
-.New:hover{
-    background-color: black;
-}
-.Enter{
-    border: none;
-}
-.Enter:hover{
-   background-color: black;
-}
-
-.Color{
-    
-    color:green;
-}
-
-/* input[type='text']{
-    background-image: url("../Login/logos/mail.png");
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 2%;
-}
-
-input[type='password']{
-    background-image: url("../Login/logos/chavi.png");
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 2%;
-} */
-
-}
-
-
-
-@media only screen and (min-width: 575px) {
-    
-    .Main{
-        width: 55%;
-        height: 76%;
-        padding-top: 10%;
-        margin-left: 30%;
+@media only screen and (min-width: 420px ) and ( min-height: 910px ){
+    #WebsiteLogo{
+        content: url("../assets/WebsiteLogo.png");
+        height:80px;
     }
-    .Password{
-        margin-top: 10%;
-    }
-
-    .flexBox{
-        margin-left: 15%;
-    }
-    
 }
 
- @media only screen and (min-width: 768px) {
-.Main{
-    width: 50%;
-    height: 80%;
-    padding-top: 7%;
-    margin-left: 35%;
+.NavLinkInActive{
+    margin: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
 }
 
- 
-
-    .Gmail{
-        height: 5h; 
-        padding-right: 47%;
-   
-} 
-
-    .Unique{
-        height: 5vh;
-        padding-right: 40%;
-        
-    }
-  
- 
- }
-
- @media only screen and (min-width: 1024px){
-     .Main{
-         width: 40%;
-         margin-left: 49%;
-         height: 80%;
-         padding-top: 7%;
-     }
-     
-     .Gmail{
-         padding-left: 10%;
-     }
-
-     .Unique{
-         padding-left: 10%;
-     }
-
-
-     .flexBox >  div{
-         margin:10%;
-     }
- }
-
- @media only screen and (min-width: 1440px){
-     .Main{
-         width: 30%;
-         height: 75%;
-         margin-left: 55%;
-         padding-top: 2%;
-     }
-
-     .Gmail{
-         padding-left: 10%;
-     }
-
-     .Unique{
-         padding-left: 10%;
-     }
- }
-
-.Unique{
-    height: 5vh;
+.NavLinkActive{
+    margin: 10px;
+    color: #6C8E0AAB;
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
 }
 
-.Gmail{
-    height: 5vh;
+.NavLinkInActive:hover{
+    color:#6C8E0AAB;
+    text-decoration: none;
 }
 
-.Msg{
-    padding-left: 30%;
-    padding-top: 2%;
+.something{
+    width: 100px;
 }
-
-.popup{
-    padding-left: 30%;
-    padding-top: 2%;
-}
-

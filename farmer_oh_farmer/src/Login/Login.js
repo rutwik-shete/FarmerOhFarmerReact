@@ -58,9 +58,10 @@ class Login extends Component{
 
     this.setState(initialState);
     this.setState({isbuttonDisabled:true});
-  PostData(this.state).then((result) => {
+     PostData(this.state).then((result) => {
     let responseJson = result;
-    if(responseJson['status']==="Success" ){
+
+        if(responseJson['status']==="Success" ){
       
       sessionStorage.setItem('userData', responseJson);
       this.setState({redirect: true});
@@ -85,7 +86,7 @@ class Login extends Component{
   render() {
 
     if(this.state.redirect){
-      return(<Redirect to={'/View'} />);
+      return(<Redirect to={'/homepage'} />);
      }
   
     return(   
@@ -97,7 +98,7 @@ class Login extends Component{
       </div> 
  <form>
 <div className="form-group">
-<input type="text"  className="form-control" name="email" placeholder="E-mail" onChange={this.onchange}  >
+<input type="text1"  className="form-control" name="email" placeholder="E-mail" onChange={this.onchange}  >
 </input>
 </div>
 

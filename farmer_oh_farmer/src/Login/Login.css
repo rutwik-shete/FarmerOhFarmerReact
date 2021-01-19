@@ -123,12 +123,13 @@
    
 }
 
+
 .form-group {
     width: 400px;
 }
 
 
-input[type="text"]::placeholder{
+input[type="text1"]::placeholder{
     text-align: left;
 }
 
