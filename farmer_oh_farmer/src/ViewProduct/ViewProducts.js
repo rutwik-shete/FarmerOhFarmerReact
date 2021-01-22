@@ -6,7 +6,25 @@ import * as Constants from "../Constants";
 import ReactLoading from "react-loading";
 
 class ViewProducts extends Component {
+
+  constructor(props){
+    super(props);
+    this.fetchProducts = this.fetchProducts.bind(this);
+    this.removeProduct = this.removeProduct.bind(this);
+  }
+  
+  state = {
+    Products: [],
+    isProductFetched:"Loading",
+
+  };
+
   componentDidMount() {
+    this.fetchProducts();
+  }
+
+
+  fetchProducts(){
     let url = Constants.GET_PRODUCTS_API;
     fetch(url, {
       method: "POST",
@@ -33,10 +51,31 @@ class ViewProducts extends Component {
     });
   }
 
-  state = {
-    Products: [],
-    isProductFetched:"Loading",
-  };
+  removeProduct(e) {
+    this.setState({
+      isProductFetched:"Loading"
+    });
+    console.log(e.target.value);
+    let url = Constants.REMOVE_PRODUCT_API;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ productId: e.target.value }),
+    }).then((result) => {
+      result.json().then((response) => {
+        if (response["status"] === "Success") {
+          console.log("Product Removed");
+          this.fetchProducts();
+        } else {
+          console.log("Remove Failed");
+        }
+        console.log({ response });
+      });
+    });
+  }
 
   render() {
     if (this.state.isProductFetched === "Success") {
@@ -44,7 +83,7 @@ class ViewProducts extends Component {
         <>
           <div className="ProductBlock">
         <Container fluid="true">
-          <ProductCart Products={this.state.Products} />
+          <ProductCart Products={this.state.Products} removeProduct = {this.removeProduct.bind(this)}/>
         </Container>
       </div>
         </>

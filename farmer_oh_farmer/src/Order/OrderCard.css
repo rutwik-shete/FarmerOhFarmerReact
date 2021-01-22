@@ -49,6 +49,7 @@ th, td {
     color: white ;
     font-weight: bold;
     padding: 3%;
+    bottom: 0;
 }
 
 .Delivered{
