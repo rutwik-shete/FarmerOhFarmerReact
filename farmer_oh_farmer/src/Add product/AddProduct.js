@@ -1,36 +1,46 @@
 
 import React, { Component } from 'react';
 import './AddProduct.css';
+import {Redirect} from 'react-router-dom';
+import {AddProductapi} from '../Notsure/AddProductapi';
 
-
+    const firststate = {
+        data: [],
+        unit:[
+        {
+            id:"Kg",
+            name:"Kilogram"
+        },
+        {
+            id:"Gm",
+            name:"Gram"
+        },
+        {
+            id:"Ltr",
+            name:"Litres"
+        },
+        ],
+        from:'',
+       selectedUnit:'',
+        selectedMeasure:'',
+        redirect: false,
+        Qtyerror:'',
+        Rateerror:'',
+        Measurement:'',
+        Rate:''
+    }
 class AddProduct extends Component {
     constructor() {
         super();
-        this.state = {
-            data: [],
-            unit:[
-            {
-                id:"Kilogram",
-                name:"Kg"
-            },
-            {
-                id:"Gram",
-                name:"Gm"
-            },
-            {
-                id:"Litres",
-                name:"ltr"
-            },
-            ],
-            from:'',
-            str:'',
-            placeholder:"Saeching from something"
-            
-        };
-        this.onchange = this.onchange.bind(this);
-        this.notso = this.notso.bind(this);
+      
+        
+        this.state = firststate;
+        this.setUnit = this.setUnit.bind(this);
+        this.setMeasure = this.setMeasure.bind(this);
+        this.submit = this.submit.bind(this);
       
     }
+      
 
     componentDidMount() {
         let url = "http://farmer-oh-farmer.herokuapp.com/api/product/getProductData";
@@ -52,39 +62,90 @@ class AddProduct extends Component {
         })
     }
 
-        onchange(from){
-            // let from="";
-            this.setState({[from.target.name]: from.target.value});
-            // this.setState({[from.target.name]: from.target.value});
-            console.log(this.state);
-       }
+    //     onchange(from){
+    //         // let from="";
+    //         this.setState({[from.target.name]: from.target.value});
+    //         // this.setState({[from.target.name]: from.target.value});
+    //         console.log(this.state);
+    //    }
        
-       notso(placeholder){
-           this.setState({[placeholder.targe.name]:placeholder.target.value });
-           console.log(this.placeholder);
-          
-       }
+    //    notso(str){
+    //        console.log('Hi');
+    //        this.setState({[str.target.name]: str.target.value});
+    //        console.log(this.str);
+
+    setUnit = async(event) => {
+       await this.setState({ selectedUnit: event.target.value });
+        // console.log(this.state.assign);
+        console.log(this.state.selectedUnit );
+        
+      };
     
+      setMeasure(e){
+        this.setState({selectedMeasure: e.target.value});
+        console.log(this.state.selectedMeasure);
+      }
+
+    //   Verified(){
+    //     let Qtyerror="";
+    //     let Rateerror="";
+    //     if(!this.state.Qty){
+    //         Qtyerror = "Enter minimum qyantity"
+    //     }
+    //     if(!this.state.Rate){
+    //         Rateerror = "Enter rate per quantity"
+    //     }
+    //     if (Qtyerror || Rateerror ) {
+    //         this.setState({Qtyerror , Rateerror });
+    //         return false;
+    //       } 
+    //       return true;
+
+    //   };
+
+      submit(){
+        // const isVerify = this.Verified();
+
+        // if(isVerify){
+      
+        //   this.setState(firststate);
+          AddProductapi(this.state).then((result) => {
+          let responseJson = result;
+      
+              if(responseJson['status']==="Success" ){
+            
+            sessionStorage.setItem('productdata', responseJson);
+            // this.setState({redirect: true});
+          }
+        
+      
+          else{
+            console.log(' Failed');
+         
+          }
+      
+        })
+        
+      }
+    
+
+//       onchange(e){
+//         this.setState({[e.target.name]: e.target.value});
+//         console.log(this.state);
+//    }
     
     render() {
         // const data = this.state.data;
         // console.warn(data);
         // const data=this.state.data;
         // console.warn(resp);
+        // if(this.state.redirect){
+        //     return(<Redirect to={'/Homepage'} />);
+        //    }
       
         return (
-            <div className="bgimage">
-                <div id="header2">
-                    <span id="header-text-4">Farmer</span>
-                    <span id="header-text-5">Oh</span>
-                    <span id="header-text-6">Farmer</span>
-
-                    <div id="header3">
-                        <span id="nextpage">View products</span>
-                        <span id="signout">Logout</span>
-
-                    </div>
-                </div>
+         
+            
 
                 <div className="Box">
                     <form>
@@ -95,18 +156,18 @@ class AddProduct extends Component {
 
                                     {
                                         this.state.data.map((Data) => (
-                                            <option value={Data.id}>{Data.name}</option>
+                                            <option key={Data.id}>{Data.name}</option>
                                         ))};
                                 </select>
                             </div>
                         </div>
                         <div className="form-row align-items-center">
                             <div className="col-auto my-1">
-                                <select className="custom-select mr-sm-2">
+                                <select className="custom-select mr-sm-2" onChange={this.setUnit} >
                                     <option value hidden >Unit</option>
                                     {
                                         this.state.unit.map((Units) => (
-                                            <option value={Units.id}>{Units.name}</option>
+                                            <option key={Units.id} value={Units.id} >{Units.name}</option>
 
                                         ))};
                                     
@@ -118,23 +179,25 @@ class AddProduct extends Component {
                         </div>
 
                         <div className="form-group Sample" >
-                            <input type="text" className="form-control" id="Notyou" placeholder="Minimum Order Qty" onChange={this.onchange} />
+                            <input type="text" className="form-control" name="Qty" placeholder="Minimum Order Qty" onChange={this.setMeasure} />
                         </div>
+                        <div className="Error">{this.state.Qtyerror}</div>
 
                         <div className="form-group Sample">
-                            <input type="text" className="form-control" id="const" placeholder="" ></input>
+                            <input type="text" className="form-control" name="Rate" placeholder={"Rate Per "+this.state.selectedMeasure+this.state.selectedUnit} onChange={this.onchange} ></input>
                         </div>
+                        <div className="Error">{this.state.Rateerror}</div>
                     </form>
                     <div className="flexBox Lol">
                         <div className="Aadd">
-                            <button className="btn btn-primary">Submit</button>
+                            <button className="btn btn-primary" onClick={this.submit}>Submit</button>
                         </div>
                         <div className="Vieww">
                             <button className="btn btn-primary">Add More...</button>
                         </div>
                     </div>
                 </div>
-            </div>
+          
 
 
 
