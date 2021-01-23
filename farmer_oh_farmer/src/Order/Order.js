@@ -3,10 +3,11 @@ import "./Order.css";
 import Orderloop from "./OrderCard";
 import Container from "react-bootstrap/Container";
 import ReactLoading from "react-loading";
+import * as Constants from "../Constants";
 class Order extends Component {
   componentDidMount() {
     let url =
-      "http://farmer-oh-farmer.herokuapp.com/api/farmer/getOrders";
+      Constants.GET_ORDERS_API;
     fetch(url, {
       method: "POST",
       headers: {

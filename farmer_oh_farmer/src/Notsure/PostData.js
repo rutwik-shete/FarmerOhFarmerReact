@@ -1,9 +1,11 @@
+import * as Constants from "../Constants";
+
 export function PostData(userData) {
     return new Promise((resolve, reject) => {
 
 
         fetch(
-            ' https://farmer-oh-farmer.herokuapp.com/api/farmer/loginFarmer', {
+            Constants.LOGIN_API, {
 
             method: 'POST',
             headers: {
