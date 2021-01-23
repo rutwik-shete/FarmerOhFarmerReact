@@ -11,17 +11,11 @@ class Orderloop extends Component {
       <Row className="justify-content-md-center">
         {this.props.ord.map((ord) => (
           <Col className="OrderRowStyle" md="auto" key={ord.id}>
-            <div className="Extend">
+            <div className="OrderCard">
               <div className="Upper">
-                <span id="Name">
                   <p className="customerInfo"> {ord.customerName} </p>
-                </span>
-                <span id="Address">
                   <p className="customerInfo"> {ord.customerAddress}</p>
-                </span>
-                <span id="Number">
                   <p className="customerInfo">{ord.customerPhone}</p>
-                </span>
               </div>
               <div>
                 <span id="Table">
@@ -55,9 +49,15 @@ class Orderloop extends Component {
                   </table>
                 </span>
               </div>
-              <button color="Red" className="Status">
-                {ord.deliveryStatus}
-              </button>
+              {ord.deliveryStatus != "DELIVERED" ? (
+                <button className="Status">
+                  {ord.deliveryStatus}
+                </button>
+              ) : (
+                <button className="Delivered">
+                  {ord.deliveryStatus}
+                </button>
+              )}
             </div>
           </Col>
         ))}

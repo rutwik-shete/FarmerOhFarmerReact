@@ -67,10 +67,27 @@
 }
 
 .NavLinkInActive:hover{
-    color:#6C8E0AAB;
+    color:black;
     text-decoration: none;
 }
 
 .something{
-    width: 100px;
+    width: max-content;
+    height:max-content;
+    margin: auto;
+}
+
+.LogOutLogo{
+    margin-top: -5px;
+}
+.LogoutText{
+    color: white;
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    align-content: center;
+    margin: auto;
 }
