@@ -47,7 +47,7 @@ select>option{
 
 .Sample{
     width: 400px;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 30%;
 }
 
@@ -67,4 +67,18 @@ select>option{
 .Lol{
     display:flex;
     margin-left: 25%;
+}
+
+.Error{
+    font-size: 20px;
+    height: 0px;
+    padding-left: 37%;  
+    color: Red;  
+}
+
+.Errors{
+    font-size: 20px;
+    height: 1px;
+    padding-left: 37%;
+    color: Red;
 }
