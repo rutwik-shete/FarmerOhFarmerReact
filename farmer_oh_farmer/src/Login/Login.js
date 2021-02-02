@@ -114,7 +114,7 @@ class Login extends Component{
 <div className="flexBox">
 <div className="Submit">
   <button type="button" className="btn btn-primary" onClick={this.login} disabled={this.state.isbuttonDisabled} >
-  {this.state.isbuttonDisabled ? 'Sending...' : 'Submit'}
+  {this.state.isbuttonDisabled ? 'Submiting...' : 'Submit'}
  </button>
 </div>
 

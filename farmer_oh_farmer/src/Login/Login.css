@@ -95,7 +95,9 @@
 
     }
 
-
+.Heading{
+    padding-top: 25px;
+}
 
 
 .Msg{
@@ -126,6 +128,11 @@
 
 .form-group {
     width: 400px;
+    margin-top: 65px;
+}
+
+.form-control{
+    margin-left: 42px;
 }
 
 
