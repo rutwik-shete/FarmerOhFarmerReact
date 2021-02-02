@@ -9,7 +9,7 @@ import * as Constants from "../Constants";
 
 class MenuBar extends Component {
   logout(){
-    window.location.replace(Constants.LOGIN_URL);
+    window.location.replace(Constants.LOGIN_API);
   }
   render() {
     return (

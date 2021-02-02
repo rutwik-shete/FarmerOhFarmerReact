@@ -17,7 +17,12 @@ class Signup extends Component {
             phonenumber: "",
             pincode: "",
             nameerror: "",
-            passerror:"",
+            passerror: "",
+            confirmpasserror: "",
+            addresserror: "",
+            emailerror: "",
+            phonenumbererror: "",
+            pincodeerror: "",
 
 
         }
@@ -80,9 +85,8 @@ class Signup extends Component {
         const passValidate = this.validate();
 
         if (passValidate) {
-
-
-            console.log('fe');
+            // console.log('request sent');
+            // console.log('fe');
             signupfarmer(this.state).then((result) => {
                 let responseJson = result;
                 if (responseJson['status'] === "Success") {
@@ -104,36 +108,81 @@ class Signup extends Component {
         let errors = {};
         let nameerror = "";
         let passerror = "";
+        let confirmpasserror = "";
+        let addresserror = "";
+        let emailerror = "";
+        let phonenumbererror = "";
+        let pincodeerror = "";
+
 
         if (!this.state.name) {
-            nameerror = "Name cannot be empty"
-        }
-        if(!this.state.password){
-            passerror = "Password cannot be empty"
-        }
-        // if (!input["confirmPassword"]) {
-        //     errors["confirmPassword"] = "Please enter your confirm password.";
-        // }
-
-        // if (typeof input["password"] !== "undefined" && typeof input["confirmPassword"] !== "undefined") {
-
-        //     if (input["password"] != input["confirmPassword"]) {
-        //         errors["password"] = "Passwords do not match.";
-        //     }
-        // }
-
-        if (nameerror) {
+            nameerror = "Name cannot be empty";
             this.setState({ nameerror });
-            return false;
         }
-        if(passerror){
-            this.setState({ passerror});
-            return false;
+        else {
+            this.setState({ nameerror });
         }
-        
-        // this.setState({
-        //     errors: errors
-        // });    
+
+        if (!this.state.password) {
+            passerror = "Please enter your password.";
+            this.setState({ passerror });
+        }
+        else {
+            this.setState({ passerror });
+        }
+
+        if (!this.state.confirmPassword) {
+            confirmpasserror = "Please confirm your password.";
+            this.setState({ confirmpasserror });
+        }
+        else {
+            this.setState({ confirmpasserror });
+        }
+
+        if (this.state.password && this.state.confirmPassword) {
+
+            if (this.state.password !== this.state.confirmPassword) {
+                passerror = "Passwords Do not Match";
+                confirmpasserror = "Passwords Do Not Match";
+                this.setState({ passerror, confirmpasserror, password: '', confirmPassword: '' });
+            }
+            else {
+                this.setState({ passerror, confirmpasserror });
+            }
+        }
+
+        if (!this.state.address) {
+            addresserror = "Please Enter Your Address";
+            this.setState({ addresserror })
+        }
+        else {
+            this.setState({ addresserror });
+        }
+
+        if (!this.state.email) {
+            emailerror = "Please Enter Your Email";
+            this.setState({ emailerror })
+        }
+        else {
+            this.setState({ emailerror });
+        }
+        if (!this.state.phonenumber) {
+            phonenumbererror = "Enter Your PhoneNumber";
+            this.setState({ phonenumbererror })
+        }
+        else {
+            this.setState({ phonenumbererror });
+        }
+        if (!this.state.pincode) {
+            pincodeerror = "Enter Your Pincode";
+            this.setState({ pincodeerror })
+        }
+        else {
+            this.setState({ pincodeerror });
+        }
+        if (nameerror || passerror || confirmpasserror || addresserror || emailerror || phonenumbererror || pincodeerror) {
+            return false
+        }
         return true;
     };
 
@@ -145,34 +194,42 @@ class Signup extends Component {
                         <div className="startselling">
                             <h1>Register And Start Selling</h1>
                         </div>
-                        <div className="name">
-                            <input type="text" value={this.state.name} onChange={this.namehandler} placeholder="Name/CompanyName/GroupName" size="50" required /><br />
-                        </div>
-                        <span>
+                        <input type="text" value={this.state.name} onChange={this.namehandler} placeholder="Name/CompanyName/GroupName" size="50" className="name" required></input>
+                        <p className="nameerror">
                             {this.state.nameerror}
-                        </span>
-
-                        <div className="password">
-                            <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Password" id="password" size="50" required /><br />
+                        </p>
+                        <div>
+                            <input type="password" value={this.state.password} onChange={this.passwordhandler} placeholder="Password" id="password" size="50" className="password" required />
+                            <p className="passerror">
+                                {this.state.passerror}
+                            </p>
                         </div>
-                        <span>
-                            {this.state.passerror}
-                        </span>
-                        <div className="confirmpassword">
-                            <input type="password" value={this.state.confirmPassword} onChange={this.confirmpasswordhandler} placeholder="Confirm Password" id="confirm_password" size="50" required /><br />
+                        <div>
+                            <input type="password" value={this.state.confirmPassword} onChange={this.confirmpasswordhandler} placeholder="Confirm Password" id="confirm_password" size="50" className="confirmpassword" required />
+                            <p className="confirmpasserror">
+                                {this.state.confirmpasserror}
+                            </p>
                         </div>
-                        <div className="address">
-                            <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50" /><br />
-                        </div>
-                        <div className="email">
-                            <input type="text" value={this.state.email} onChange={this.emailhandler} placeholder="Email" size="50" /><br />
-                        </div>
+                        <input type="text" value={this.state.address} onChange={this.addresshandler} placeholder="Address" size="50" className="address" /><br />
+                        <p className="addresserror">
+                            {this.state.addresserror}
+                        </p>
+                        <input type="text" value={this.state.email} onChange={this.emailhandler} placeholder="Email" size="50" className="email" /><br />
+                        <p className="emailerror">
+                            {this.state.emailerror}
+                        </p>
                         <div className="flexbox">
-                            <div className="phonenumber">
-                                <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber" maxlength="10" required /><br />
+                            <div>
+                                <input type="tel" value={this.state.phonenumber} onChange={this.phonenumberhandler} placeholder="PhoneNumber" maxlength="10" className="phonenumber" required /><br />
+                                <p className="phonenumbererror">
+                                    {this.state.phonenumbererror}
+                                </p>
                             </div>
-                            <div className="pincode">
-                                <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder=" PinCode" maxlength="6" size="20" required /><br />
+                            <div>
+                                <input type="text" value={this.state.pincode} onChange={this.pincodehandler} placeholder=" PinCode" maxlength="6" className="pincode" required /><br />
+                                <p className="pincodeerror">
+                                    {this.state.pincodeerror}
+                                </p>
                             </div>
                         </div>
                         <div className="submit">

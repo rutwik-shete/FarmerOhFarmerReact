@@ -91,7 +91,7 @@ class Login extends Component{
   
     return(   
       <div className="bgimage">
-              {/* <Signup></Signup>  */}
+              <Signup></Signup> 
       <div className="Main">
       <div className="Heading"> 
             <h1>LOGIN</h1>

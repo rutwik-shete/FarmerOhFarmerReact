@@ -5,15 +5,15 @@
     bottom: 0;
     left: 0;
     right: 0;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 65%;
     margin: auto;
     text-align: center;
     border-radius: 30px;
     background-color: #6C8E0AAB;
     /* overflow-y: scroll; */
 }
-input{
+/* input{
     height: 30px;
     font: message-box;
     border-radius: 10px;
@@ -21,9 +21,16 @@ input{
     border-color: white;
     font-size: large;
     color: #6C8E0AAB;
-} 
+}  */
 .name{
-    margin:35px;
+    margin: 10px;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
 }
 .startselling{
     margin: 10px;
@@ -31,35 +38,80 @@ input{
 }
 
 .password{
-    margin: 35px;
+    margin: 10px;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
 }
 .confirmpassword{
-    margin: 35px;
+    margin: 10px;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
 }
 .address{
-    margin: 35px;
+    margin: 10px;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
 }
 .email{
-    position: relative;
+    margin: 10px;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
 }
 .submit{
+    margin: 10px;
     position: relative;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    font-size: large;
     top: 10px;    
 }
 .flexbox{
     position: relative;
-    top: 5px;
+    /* top: 5px; */
     display: flex;
     justify-content: center;
-    margin: 13px;
 }
 .phonenumber{
-    margin: 15px;
-    top: 280px;
+    margin: 10px;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
 }
 .pincode{
+    margin: 10px;
 
-    margin: 15px;
+    height: 30px;
+    font: message-box;
+    border-radius: 10px;
+    border-style: dotted;
+    border-color: white;
+    font-size: large;
+    color: #6C8E0AAB;
 }
 .blurredbg{
     background-color: rgba(255, 255, 255, 0.719);
@@ -73,3 +125,24 @@ input{
     color: #6C8E0AAB;
     padding-right: 30px; 
 } 
+.nameerror{
+    margin-right: 25%;
+}
+.passerror{
+    margin-right: 22.5%;
+}
+.confirmpasserror{
+    margin-right: 21%;
+}
+.addresserror{
+    margin-right: 23%;
+}
+.emailerror{
+    margin-right: 24%;
+}
+.pincodeerror{
+    margin-right: 33%;
+}
+.phonenumbererror{
+    margin-right: 11%;
+}
