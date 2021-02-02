@@ -109,7 +109,7 @@ class AddProduct extends Component {
       let Qtyerror="";
       if(!this.state.Rate) {
         Rateerror = "Rate cannot be empty";
-     
+        
         // alert("Rate cannot be empty");
       }
       if(!this.state.selectedMeasure) {
@@ -120,11 +120,11 @@ class AddProduct extends Component {
       }
       if(!this.state.selectValue){
         alert("Please select product");
-        return false;
+     
       }
       if(!this.state.cheakUnit){
         alert("Please select a unit");
-        return false;
+       
       }
 
       if(Qtyerror||Rateerror){
@@ -282,11 +282,11 @@ class AddProduct extends Component {
           <div className="form-group Sample">
             <input
               type="text"
-              className="form-control"
+              className="form-inline"
               placeholder="Minimum Order Qty"
               onChange={this.setMeasure}
             
-             
+           
             />
           </div>
           <div className="Error">{this.state.Qtyerror}</div>
@@ -294,7 +294,7 @@ class AddProduct extends Component {
           <div className="form-group Sample">
             <input
               type="text"
-              className="form-control"
+              className="form-inline"
               placeholder={
                 "Rate Per " +
                 this.state.selectedMeasure +
