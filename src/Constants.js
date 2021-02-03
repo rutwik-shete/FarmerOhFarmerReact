@@ -6,3 +6,4 @@ export const GET_ORDERS_API = HOST_URL + "farmer/getOrders";
 export const GET_PRODUCTS_API = HOST_URL + "farmer/getProducts";
 export const REMOVE_PRODUCT_API = HOST_URL + "farmer/removeProduct";
 export const ADD_PRODUCT_API = HOST_URL + "farmer/addProduct";
+export const SIGNUP_API = HOST_URL + "farmer/addFarmer";

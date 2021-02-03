@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Signup.css';
 import signupAPI, { signupfarmer } from '../Notsure/signupAPI';
-
+import { Redirect } from 'react-router-dom';
+import * as Constants from "../Constants";
 class Signup extends Component {
 
 
@@ -23,6 +24,7 @@ class Signup extends Component {
             emailerror: "",
             phonenumbererror: "",
             pincodeerror: "",
+            redirect: false,
 
 
         }
@@ -30,9 +32,9 @@ class Signup extends Component {
         this.validate = this.validate.bind(this);
     }
 
-    rutwik() {
-        console.log('Alo')
-    }
+    // rutwik() {
+    //     console.log('Alo')
+    // }
 
     namehandler = (event) => {
         this.setState({
@@ -87,25 +89,59 @@ class Signup extends Component {
     }
     submit() {
         const passValidate = this.validate();
-
         if (passValidate) {
-            //     console.log('request sent');
-            //     console.log('fe');
-            signupfarmer(this.state).then((result) => {
-                let responseJson = result;
-                if (responseJson['status'] === "Success") {
+            let url = Constants.SIGNUP_API;
+            fetch(url,
+                {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Contents-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name: this.state.name,
+                        phone: this.state.phonenumber,
+                        email: this.state.email,
+                        password: this.state.password,
+                        address: this.state.address,
+                        pincode: this.state.pincode,
 
-                    sessionStorage.setItem('userData', responseJson);
-                    console.log(responseJson);
-                }
-
-                else {
-                    console.log('Failed');
-                    console.log(result);
-                }
-            })
+                    }),
+                }).then((result) => {
+                    result.json().then((response) => {
+                        if (response["status"] === "Success") {
+                            console.log("Product Added");
+                            this.setState({ redirect: true });
+                        } else {
+                            console.log("Product Failed");
+                        }
+                        console.log({ response });
+                    });
+                });
         }
     }
+
+
+
+    // if (passValidate) {
+    //     //     console.log('request sent');
+    //     //     console.log('fe');
+    //     signupfarmer(this.state).then((result) => {
+    //         let responseJson = result;
+    //         if (responseJson['status'] === "Success") {
+
+    //             // sessionStorage.setItem('userData', responseJson);
+    //             this.setState({redirect: true});
+    //             // console.log(responseJson);
+    //         }
+
+    //         else {
+    //             console.log('Failed');
+    //             console.log(result);
+    //         }
+    //     })
+    // }
+
     validate() {
 
         let input = this.state.input;
@@ -191,6 +227,11 @@ class Signup extends Component {
     };
 
     render() {
+        if (this.setState.redirect) {
+            return (
+                <Redirect to={'/homepage'} />
+            );
+        }
         return (
             <>
                 <div className="blurredbg" onClick={this.props.fun}>

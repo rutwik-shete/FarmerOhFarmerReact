@@ -12,7 +12,7 @@
     border-radius: 30px;
     background-color: #6C8E0AAB;
     z-index: 2;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 /* input{
     height: 30px;
