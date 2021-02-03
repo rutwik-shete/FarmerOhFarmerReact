@@ -1,4 +1,4 @@
-// export const LOGIN_URL = "http://localhost:3001/";
+export const LOGIN_URL = "https://farmer-oh-farmer-react.herokuapp.com/";
 const HOST_URL = "https://farmer-oh-farmer.herokuapp.com/api/";
 // const HOST_URL = "http://localhost:8080/api/";
 export const LOGIN_API = HOST_URL + "farmer/loginFarmer";
