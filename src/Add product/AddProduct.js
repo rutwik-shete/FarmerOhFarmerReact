@@ -25,6 +25,8 @@ const firststate = {
   redirect: false,
   Qtyerror: "",
   Rateerror: "",
+  productError:"",
+  unitError:"",
   Rate: "",
   productDataID: "",
   optionId:"1",
@@ -107,6 +109,9 @@ class AddProduct extends Component {
     Verified(){
       let Rateerror="";
       let Qtyerror="";
+      let productError="";
+      let unitError="";
+
       if(!this.state.Rate) {
         Rateerror = "Rate cannot be empty";
         
@@ -119,16 +124,16 @@ class AddProduct extends Component {
         // return false;
       }
       if(!this.state.selectValue){
-        alert("Please select product");
+        productError = "Please select a product";
      
       }
       if(!this.state.cheakUnit){
-        alert("Please select a unit");
-       
+        unitError = "Please select a unit";
+
       }
 
-      if(Qtyerror||Rateerror){
-        this.setState({Qtyerror,Rateerror});
+      if(Qtyerror||Rateerror||productError||unitError){
+        this.setState({Qtyerror,Rateerror,productError,unitError});
         return false;
       }
   
@@ -220,11 +225,8 @@ class AddProduct extends Component {
     const isVal= this.Verified();
   
   if(isVal){
-    this.setState({Rateerror:""});
-    this.setState({Qtyerror:""});
+    this.setState({firststate});
     alert("Product Added succesfully");
-    
-
   }
    
 }
@@ -262,7 +264,7 @@ class AddProduct extends Component {
                 ;
               </select>
             </div>
-            <div>{this.state.Optionerror}</div>
+            <div>{this.state.productError}</div>
           </div>
           <div className="form-row align-items-center">
             <div className="col-auto my-1">
@@ -277,8 +279,12 @@ class AddProduct extends Component {
                 ))} ;
               </select>
             </div>
+            <div>
+            {this.state.unitError}
           </div>
 
+          </div>
+        
           <div className="form-group Sample">
             <input
               type="text"
