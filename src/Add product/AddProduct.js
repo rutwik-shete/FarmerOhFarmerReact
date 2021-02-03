@@ -25,15 +25,15 @@ const firststate = {
   redirect: false,
   Qtyerror: "",
   Rateerror: "",
-  productError:"",
-  unitError:"",
+  productError: "",
+  unitError: "",
   Rate: "",
   productDataID: "",
-  optionId:"1",
-  unitId:"1",
-  selectValue:"",
-  cheakUnit:""
- 
+  optionId: "1",
+  unitId: "1",
+  selectValue: "",
+  cheakUnit: "",
+  reload: false,
 };
 class AddProduct extends Component {
   constructor() {
@@ -47,7 +47,6 @@ class AddProduct extends Component {
     this.onchange = this.onchange.bind(this);
     this.addMoreProduct = this.addMoreProduct.bind(this);
     this.Verified = this.Verified.bind(this);
-  
   }
 
   componentDidMount() {
@@ -75,20 +74,16 @@ class AddProduct extends Component {
   //        this.setState({[str.target.name]: str.target.value});
   //        console.log(this.str);
 
-
-
   setUnit = async (event) => {
     event.persist();
     await this.setState({ selectedUnit: event.target.value });
     // console.log(this.state.assign);
     console.log(this.state.selectedUnit);
     //  this.setState({cheakUnit: event.target.value});
-    
-    this.setState(() =>  ({
-      cheakUnit :event.target.value
 
+    this.setState(() => ({
+      cheakUnit: event.target.value,
     }));
-
   };
 
   setMeasure(e) {
@@ -98,133 +93,149 @@ class AddProduct extends Component {
 
   setProductDataID(e) {
     this.setState({ productDataID: e.target.value });
-    this.setState({ selectValue: e.target.value});
+    this.setState({ selectValue: e.target.value });
   }
 
-    Verified(){
-      let Rateerror="";
-      let Qtyerror="";
-      let productError="";
-      let unitError="";
+  Verified() {
+    let Rateerror = "";
+    let Qtyerror = "";
+    let productError = "";
+    let unitError = "";
 
-      if(!this.state.Rate) {
-        Rateerror = "Rate cannot be empty";
-        
-        // alert("Rate cannot be empty");
-      }
-      if(!this.state.selectedMeasure) {
-        Qtyerror = "Quantity cannot be empty";
-       
-        // alert("Quantity cannot be empty");
-        // return false;
-      }
-      if(!this.state.selectValue){
-        productError = "Please select a product";
-     
-      }
-      if(!this.state.cheakUnit){
-        unitError = "Please select a unit";
+    if (!this.state.Rate) {
+      Rateerror = "Rate cannot be empty";
 
-      }
+      // alert("Rate cannot be empty");
+    }
+    if (!this.state.selectedMeasure) {
+      Qtyerror = "Quantity cannot be empty";
 
-      if(Qtyerror||Rateerror||productError||unitError){
-        this.setState({Qtyerror,Rateerror,productError,unitError});
-        return false;
-      }
-  
+      // alert("Quantity cannot be empty");
+      // return false;
+    }
+    if (!this.state.selectValue) {
+      productError = "Please select a product";
+    }
+    if (!this.state.cheakUnit) {
+      unitError = "Please select a unit";
+    }
 
-      return true;
-  
-     
+    if (Qtyerror || Rateerror || productError || unitError) {
+      this.setState({ Qtyerror, Rateerror, productError, unitError });
+      return false;
+    }
 
-    };
+    return true;
+  }
 
-    // Validation(){
-    //   let Rateerror="";
-    //   let Qtyerror="";
-    //   if(!this.state.Rate) {
-    //     Rateerror = "Rate cannot be empty";
-    //     this.setState({Rateerror});
-    //     // alert("Rate cannot be empty");
-    //   }
-    //   if(!this.state.selectedMeasure) {
-    //     Qtyerror = "Quantity cannot be empty";
-    //     this.setState({Qtyerror});
-    //     // alert("Quantity cannot be empty");
-    //     // return false;
-    //   }
-    //   if(!this.state.selectValue){
-    //     alert("Please select product");
-      
-    //   }
-    //   if(!this.state.cheakUnit){
-    //     alert("Please select a unit");
-    //     return false;
-    //   }
-    //   // if(this.state.selectValue == "Choose product"){
-    //   //   Optionerror = "Choose a product";
-        
-    //   // }
-    //   // if(Rateerror || Qtyerror){
-    //   //   this.setState({  Rateerror, Qtyerror});
-    //   //   return false;
-    //   // }
+  // Validation(){
+  //   let Rateerror="";
+  //   let Qtyerror="";
+  //   if(!this.state.Rate) {
+  //     Rateerror = "Rate cannot be empty";
+  //     this.setState({Rateerror});
+  //     // alert("Rate cannot be empty");
+  //   }
+  //   if(!this.state.selectedMeasure) {
+  //     Qtyerror = "Quantity cannot be empty";
+  //     this.setState({Qtyerror});
+  //     // alert("Quantity cannot be empty");
+  //     // return false;
+  //   }
+  //   if(!this.state.selectValue){
+  //     alert("Please select product");
 
-    //   return true;
-    // }
- 
+  //   }
+  //   if(!this.state.cheakUnit){
+  //     alert("Please select a unit");
+  //     return false;
+  //   }
+  //   // if(this.state.selectValue == "Choose product"){
+  //   //   Optionerror = "Choose a product";
+
+  //   // }
+  //   // if(Rateerror || Qtyerror){
+  //   //   this.setState({  Rateerror, Qtyerror});
+  //   //   return false;
+  //   // }
+
+  //   return true;
+  // }
 
   addProductToFarmer() {
     const isVerify = this.Verified();
-  
+
     // console.log(this.state.Rate);
     // console.log(this.state.selectedMeasure);
     // console.log(this.state.selectedUnit);    // console.log(this.state.productDataID);
-    if(isVerify) {
-    let url = Constants.ADD_PRODUCT_API;
-    fetch(url, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        cost: this.state.Rate,
-        measurement: this.state.selectedMeasure + this.state.selectedUnit,
-        farmer:{
-            id:"2"
+    if (isVerify) {
+      let url = Constants.ADD_PRODUCT_API;
+      fetch(url, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        productData:{
-            id:this.state.productDataID
-        }
-      }),
-    }).then((result) => {
-      result.json().then((response) => {
-        if (response["status"] === "Success") {
-          console.log("Product Added");
-          this.setState({redirect: true});
-        } else {
-          console.log("Product Failed");      
-        }
-        console.log({ response });
+        body: JSON.stringify({
+          cost: this.state.Rate,
+          measurement: this.state.selectedMeasure + this.state.selectedUnit,
+          farmer: {
+            id: sessionStorage.getItem("userData"),
+          },
+          productData: {
+            id: this.state.productDataID,
+          },
+        }),
+      }).then((result) => {
+        result.json().then((response) => {
+          if (response["status"] === "Success") {
+            console.log("Product Added");
+            this.setState({ redirect: true });
+          } else {
+            console.log("Product Failed");
+          }
+          console.log({ response });
+        });
       });
-    });
+    }
+  }
+  addMoreProduct() {
+    const isVerify = this.Verified();
 
-    
-  
+    // console.log(this.state.Rate);
+    // console.log(this.state.selectedMeasure);
+    // console.log(this.state.selectedUnit);    // console.log(this.state.productDataID);
+    if (isVerify) {
+      let url = Constants.ADD_PRODUCT_API;
+      fetch(url, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          cost: this.state.Rate,
+          measurement: this.state.selectedMeasure + this.state.selectedUnit,
+          farmer: {
+            id: sessionStorage.getItem("userData"),
+          },
+          productData: {
+            id: this.state.productDataID,
+          },
+        }),
+      }).then((result) => {
+        result.json().then((response) => {
+          if (response["status"] === "Success") {
+            alert("Product Added");
+            this.setState({ reload: true });
+          } else {
+            console.log("Product Failed");
+          }
+          console.log({ response });
+        });
+      });
+    }
   }
-}
-  addMoreProduct(){
-//  const isVal = this.Validation();
-    const isVal= this.Verified();
-  
-  if(isVal){
-    this.setState({firststate});
-    alert("Product Added succesfully");
-  }
-   
-}
- 
 
   onchange(e) {
     this.setState({ Rate: e.target.value });
@@ -236,9 +247,12 @@ class AddProduct extends Component {
     // console.warn(data);
     // const data=this.state.data;
     // console.warn(resp);
-    if(this.state.redirect){
-        return(<Redirect to={'/Homepage'} />);
-       }
+    if (this.state.redirect) {
+      return <Redirect to={"/Homepage/viewproducts"} />;
+    }
+    if (this.state.reload) {
+      return <Redirect to={"/Homepage/"} />;
+    }
 
     return (
       <div className="Box">
@@ -247,13 +261,15 @@ class AddProduct extends Component {
             <div className="col-auto my-1">
               <select
                 className="custom-select mr-sm-2 trial"
-                onChange={this.setProductDataID} 
+                onChange={this.setProductDataID}
               >
-                <option value hidden >
-                Choose product
+                <option value hidden>
+                  Choose product
                 </option>
                 {this.state.data.map((Data) => (
-                  <option key={Data.id} value={Data.id}>{Data.name}</option>
+                  <option key={Data.id} value={Data.id}>
+                    {Data.name}
+                  </option>
                 ))}
                 ;
               </select>
@@ -262,7 +278,7 @@ class AddProduct extends Component {
           </div>
           <div className="form-row align-items-center">
             <div className="col-auto my-1">
-              <select className="custom-select mr-sm-2" onChange={this.setUnit} >
+              <select className="custom-select mr-sm-2" onChange={this.setUnit}>
                 <option value hidden>
                   Unit
                 </option>
@@ -270,23 +286,19 @@ class AddProduct extends Component {
                   <option key={Units.id} value={Units.id}>
                     {Units.name}
                   </option>
-                ))} ;
+                ))}{" "}
+                ;
               </select>
             </div>
-            <div>
-            {this.state.unitError}
+            <div>{this.state.unitError}</div>
           </div>
 
-          </div>
-        
           <div className="form-group Sample">
             <input
               type="text"
               className="form-inline"
               placeholder="Minimum Order Qty"
               onChange={this.setMeasure}
-            
-           
             />
           </div>
           <div className="Error">{this.state.Qtyerror}</div>
@@ -301,7 +313,6 @@ class AddProduct extends Component {
                 this.state.selectedUnit
               }
               onChange={this.onchange}
-            
             ></input>
           </div>
           <div className="Errors">{this.state.Rateerror}</div>
@@ -316,7 +327,9 @@ class AddProduct extends Component {
             </button>
           </div>
           <div className="Vieww">
-            <button className="btn btn-primary" onClick={this.addMoreProduct}>Add More...</button>
+            <button className="btn btn-primary" onClick={this.addMoreProduct}>
+              Add More...
+            </button>
           </div>
         </div>
       </div>
