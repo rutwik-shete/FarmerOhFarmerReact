@@ -51,14 +51,9 @@ class AddProduct extends Component {
   }
 
   componentDidMount() {
-    let url =
-      "http://farmer-oh-farmer.herokuapp.com/api/product/getProductData";
+    let url = Constants.GET_PRODUCT_DATA;
     fetch(url, {
       method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
     }).then((result) => {
       result.json().then((resp) => {
         this.setState({ data: resp["result"] });
