@@ -14,7 +14,7 @@ class HomePage extends Component {
         <Router>
           <MenuBar />
           <Switch>
-            <Route path="/" exact component={Order} />
+            <Route path="/" exact component={AddProduct} />
             <Route path="/homepage/vieworders" component={Order}/>
             <Route path="/homepage/viewproducts" component={ViewProducts}/>
             <Route path="/homepage/addproducts" component={AddProduct}/>
