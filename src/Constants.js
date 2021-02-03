@@ -8,3 +8,4 @@ export const GET_PRODUCT_DATA = HOST_URL + "product/getProductData";
 export const REMOVE_PRODUCT_API = HOST_URL + "farmer/removeProduct";
 export const ADD_PRODUCT_API = HOST_URL + "farmer/addProduct";
 export const SIGNUP_API = HOST_URL + "farmer/addFarmer";
+export const DELIVERY_PINCODE_API = HOST_URL + "farmer/addDeliveryLocations";

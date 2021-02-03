@@ -23,9 +23,11 @@ class Signup extends Component {
       phonenumbererror: "",
       pincodeerror: "",
       redirect: false,
+      deliveryPincodes:'',
     };
     this.submit = this.submit.bind(this);
     this.validate = this.validate.bind(this);
+    this.addLocationToFarmer = this.addLocationToFarmer.bind(this);
   }
 
   // rutwik() {
@@ -103,15 +105,45 @@ class Signup extends Component {
       }).then((result) => {
         result.json().then((response) => {
           if (response["status"] === "Success") {
-            console.log("Product Added");
-            this.setState({ redirect: true });
+            console.log("User Added");
+            sessionStorage.setItem('userData', response.result.id);
+            this.addLocationToFarmer(response.result.id);
+            //this.setState({ redirect: true });
           } else {
-            console.log("Product Failed");
+            console.log("User Adding Failed");
           }
           console.log({ response });
         });
       });
     }
+  }
+
+  addLocationToFarmer(farmerId){
+    var deliveryPincodeArray = this.state.deliveryPincodes.split(',');
+    let url = Constants.DELIVERY_PINCODE_API;
+      fetch(url, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          farmerId: [farmerId],
+          locations: deliveryPincodeArray,
+        }),
+      }).then((result) => {
+        result.json().then((response) => {
+          if (response["status"] === "Success") {
+            console.log("Locations Added");
+            sessionStorage.setItem('userData', response.result.id);
+            this.addLocationToFarmer(response.result.id);
+            this.setState({ redirect: true });
+          } else {
+            console.log("Location Adding Failed");
+          }
+          console.log({ response });
+        });
+      });
   }
 
   // if (passValidate) {
