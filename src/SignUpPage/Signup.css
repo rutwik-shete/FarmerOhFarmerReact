@@ -174,3 +174,10 @@
     font-size: larger;
 
 }
+
+.pins{
+    width:93%;
+    border-radius: 10px;
+    border:none;
+    height: 29px;
+}
