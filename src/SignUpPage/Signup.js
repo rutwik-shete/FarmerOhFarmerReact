@@ -30,6 +30,10 @@ class Signup extends Component {
         this.validate = this.validate.bind(this);
     }
 
+    rutwik() {
+        console.log('Alo')
+    }
+
     namehandler = (event) => {
         this.setState({
             name: event.target.value
@@ -85,8 +89,8 @@ class Signup extends Component {
         const passValidate = this.validate();
 
         if (passValidate) {
-            // console.log('request sent');
-            // console.log('fe');
+            //     console.log('request sent');
+            //     console.log('fe');
             signupfarmer(this.state).then((result) => {
                 let responseJson = result;
                 if (responseJson['status'] === "Success") {
@@ -188,8 +192,10 @@ class Signup extends Component {
 
     render() {
         return (
-            <div className="blurredbg">
-                <div className="Home">
+            <>
+                <div className="blurredbg" onClick={this.props.fun}>
+                </div>
+                <div className="Home" >
                     <form>
                         <div className="startselling">
                             <h1>Register And Start Selling</h1>
@@ -237,7 +243,7 @@ class Signup extends Component {
                         </div>
                     </form>
                 </div>
-            </div>
+            </>
         );
     }
 }
