@@ -220,7 +220,7 @@ class Signup extends Component {
   }
 
   render() {
-    if (this.setState.redirect) {
+    if (this.state.redirect) {
       return <Redirect to={"/homepage"} />;
     }
     return (
