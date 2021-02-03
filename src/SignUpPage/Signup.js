@@ -23,6 +23,7 @@ class Signup extends Component {
       phonenumbererror: "",
       pincodeerror: "",
       redirect: false,
+      deliveryPincodes:"",
     };
     this.submit = this.submit.bind(this);
     this.validate = this.validate.bind(this);
@@ -65,6 +66,11 @@ class Signup extends Component {
   pincodehandler = (event) => {
     this.setState({
       pincode: event.target.value,
+    });
+  };
+  deliveryhandler = (event) => {
+    this.setState({
+      deliveryPincodes:event.target.value,
     });
   };
 
@@ -317,9 +323,13 @@ class Signup extends Component {
                 <p className="pincodeerror">{this.state.pincodeerror}</p>
               </div>
             </div>
-            <div className="submit">
-              <input type="button" onClick={this.submit} value="Sign Up" />
+            <div className="Deliverypins">
+              <input type="text" className="pins" placeholder="DeliveryPincodes"  onChange={this.deliveryhandler} ></input>
             </div>
+            <div className="submit">
+              <input type="button"  onClick={this.submit} value="Sign Up" />
+            </div>
+        
           </form>
         </div>
       </>
