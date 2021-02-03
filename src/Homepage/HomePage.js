@@ -18,7 +18,7 @@ class HomePage extends Component {
             <Route path="/homepage/vieworders" component={Order}/>
             <Route path="/homepage/viewproducts" component={ViewProducts}/>
             <Route path="/homepage/addproducts" component={AddProduct}/>
-            <Redirect to = "/homepage/viewproducts" />
+            <Redirect to = "/homepage/addproducts" />
           </Switch>
         </Router>
       </>
