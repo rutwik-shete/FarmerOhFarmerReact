@@ -237,7 +237,7 @@ class AddProduct extends Component {
     // const data=this.state.data;
     // console.warn(resp);
     if(this.state.redirect){
-        return(<Redirect to={'/Homepage'} />);
+        return(<Redirect to={'/Homepage/viewproducts'} />);
        }
 
     return (
