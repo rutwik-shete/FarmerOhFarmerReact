@@ -14,7 +14,7 @@ class Order extends Component {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ farmerId: "2" }),
+      body: JSON.stringify({ farmerId: sessionStorage.getItem('userData') }),
     }).then((result) => {
       result.json().then((response) => {
         if (response["status"] === "Success") {

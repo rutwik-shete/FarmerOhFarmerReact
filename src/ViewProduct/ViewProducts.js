@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ViewProducts.css";
+import Login from '../Login/Login';
 import ProductCart from "./ProductCart";
 import Container from "react-bootstrap/Container";
 import * as Constants from "../Constants";
@@ -26,13 +27,15 @@ class ViewProducts extends Component {
 
   fetchProducts(){
     let url = Constants.GET_PRODUCTS_API;
+   
     fetch(url, {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ farmerId: "2" }),
+      body: JSON.stringify({ farmerId: sessionStorage.getItem('userData')}),
+    
     }).then((result) => {
       result.json().then((response) => {
         if (response["status"] === "Success") {

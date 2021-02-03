@@ -184,8 +184,7 @@ class AddProduct extends Component {
   
     // console.log(this.state.Rate);
     // console.log(this.state.selectedMeasure);
-    // console.log(this.state.selectedUnit);
-    // console.log(this.state.productDataID);
+    // console.log(this.state.selectedUnit);    // console.log(this.state.productDataID);
     if(isVerify) {
     let url = Constants.ADD_PRODUCT_API;
     fetch(url, {

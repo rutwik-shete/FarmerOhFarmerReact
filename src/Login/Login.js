@@ -12,7 +12,9 @@ const initialState = {
   emailError:'',
   passwordError:'',
   isbuttonDisabled:false,
-  Displaymessage:''
+  Displaymessage:'',
+  issignup:false,
+  signupcode:'',
 }
 
 
@@ -25,6 +27,7 @@ class Login extends Component{
       this.state = initialState;
        this.login = this.login.bind(this);
        this.onchange = this.onchange.bind(this);
+       this.toggleSignupForm = this.toggleSignupForm.bind(this);
 
   }
 
@@ -63,8 +66,9 @@ class Login extends Component{
 
         if(responseJson['status']==="Success" ){
       
-      sessionStorage.setItem('userData', responseJson);
+      sessionStorage.setItem('userData', responseJson.result.id);
       this.setState({redirect: true});
+    
     }
   
 
@@ -79,11 +83,29 @@ class Login extends Component{
  
  }
 
+ toggleSignupForm(){
+    if(this.state.issignup)
+      this.setState({issignup:false});
+    else
+      this.setState({issignup:true});
+ }
+
  onchange(e){
       this.setState({[e.target.name]: e.target.value});
       console.log(this.state);
  }
   render() {
+
+    if(this.state.issignup){
+      // this.setState({
+      //   signupcode:<Signup></Signup>
+      // });
+      this.state.signupcode = <Signup fun={this.toggleSignupForm.bind(this)}></Signup>;
+  
+    }
+    else{
+      this.state.signupcode=null;
+    }
 
     if(this.state.redirect){
       return(<Redirect to={'/homepage'} />);
@@ -91,7 +113,7 @@ class Login extends Component{
   
     return(   
       <div className="bgimage">
-              {/* <Signup></Signup>  */}
+               {this.state.signupcode}
       <div className="Main">
       <div className="Heading"> 
             <h1>LOGIN</h1>
@@ -119,7 +141,7 @@ class Login extends Component{
 </div>
 
 <div className="Signup">
- <button type="button" className="btn btn-primary" >
+ <button type="button" className="btn btn-primary" onClick={this.toggleSignupForm}>
    Create account</button> 
 </div>
 </div>  

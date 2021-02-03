@@ -9,7 +9,7 @@ import * as Constants from "../Constants";
 
 class MenuBar extends Component {
   logout(){
-    window.location.replace(Constants.LOGIN_API);
+    window.location.replace(Constants.LOGIN_URL);
   }
   render() {
     return (
@@ -20,7 +20,7 @@ class MenuBar extends Component {
           </div>
 
           <Navbar className="NavBarStyle" expand="lg">
-            <Navbar.Brand href="#home"></Navbar.Brand>
+            <Navbar.Brand></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
               id="basic-navbar-nav"
